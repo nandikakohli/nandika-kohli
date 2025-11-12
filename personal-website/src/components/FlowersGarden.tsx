@@ -102,15 +102,39 @@ export default function FlowersGarden({ className }: FlowersGardenProps) {
   return (
     <div
       className={className}
-      style={{ position: 'absolute', left: 0, right: 0, bottom: 0, pointerEvents: 'none', zIndex: 0 }}
+      style={{ position: 'absolute', left: 0, right: 0, bottom: 0, width: '100vw', pointerEvents: 'none', zIndex: 0 }}
     >
-      <svg viewBox="0 0 100 200" preserveAspectRatio="none" width="100%" height="280">
+      <svg viewBox="0 0 100 200" preserveAspectRatio="none" width="100vw" height="34vh">
         <defs>
           <linearGradient id="stem" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0%" stopColor="#4a9158" />
             <stop offset="100%" stopColor="#2f6b3e" />
           </linearGradient>
+          <linearGradient id="leafDark" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stopColor="#274e3b" />
+            <stop offset="100%" stopColor="#1e3d2f" />
+          </linearGradient>
+          <linearGradient id="leafMid" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stopColor="#3e7759" />
+            <stop offset="100%" stopColor="#2e5e45" />
+          </linearGradient>
         </defs>
+        {/* Background foliage band for full-bleed coverage */}
+        <motion.g
+          animate={{ x: [0, -0.6, 0.6, 0], y: [0, -0.8, 0, 0] }}
+          transition={{ duration: 16, repeat: Infinity, ease: [0.42, 0, 0.58, 1] }}
+          style={{ opacity: 0.9 }}
+        >
+          <rect x="-5" y="155" width="110" height="50" fill="url(#leafDark)" rx="3" />
+          {/* shrub silhouettes */}
+          <path d="M0 180 C 10 160, 25 160, 35 180 C 45 195, 55 190, 65 178 C 78 162, 90 165, 100 180 L 100 205 L 0 205 Z" fill="url(#leafMid)" opacity="0.9" />
+        </motion.g>
+
+        {/* Edge fillers to guarantee coverage to screen edges */}
+        <g>
+          <path d="M-5 200 L -5 165 C 5 158, 10 170, 15 180 C 18 186, 22 192, 25 200 Z" fill="#2e5e45" opacity="0.95" />
+          <path d="M100 200 L 100 165 C 95 158, 92 170, 87 180 C 84 186, 80 192, 77 200 Z" fill="#2e5e45" opacity="0.95" />
+        </g>
 
         {flowers.map((f, i) => (
           <motion.g
@@ -135,7 +159,7 @@ export default function FlowersGarden({ className }: FlowersGardenProps) {
           </motion.g>
         ))}
 
-        <rect x="0" y="180" width="100" height="30" fill="#a6d8a8" opacity="0.6" />
+        <rect x="0" y="180" width="100" height="30" fill="#a6d8a8" opacity="0.55" />
         <rect x="0" y="190" width="100" height="20" fill="#8bcf91" opacity="0.8" />
       </svg>
     </div>
