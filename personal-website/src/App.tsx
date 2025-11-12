@@ -4,11 +4,13 @@ import { OrbitControls, Environment } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { Suspense } from 'react';
 import Character from './components/3DCharacter/Character';
+import FlowersGarden from './components/FlowersGarden';
 import './App.css';
 
 const Home = () => {
   return (
     <div className="home-container">
+      <FlowersGarden />
       <div className="content">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
