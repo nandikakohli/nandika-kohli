@@ -377,3 +377,28 @@ h1 {
 .floating {
   animation: float 6s ease-in-out infinite;
 }
+
+/* Profile photo styles */
+.photo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border: 6px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+}

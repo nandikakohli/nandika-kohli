@@ -1,9 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Environment } from '@react-three/drei';
 import { motion } from 'framer-motion';
-import { Suspense } from 'react';
-import Character from './components/3DCharacter/Character';
 import FlowersGarden from './components/FlowersGarden';
 import './App.css';
 
@@ -25,16 +21,16 @@ const Home = () => {
             <Link to="/projects" className="cta-button secondary">See Projects</Link>
           </div>
         </motion.div>
-        <div className="canvas-container">
-          <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-            <ambientLight intensity={0.5} />
-            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-            <Suspense fallback={null}>
-              <Character scale={[0.8, 0.8, 0.8]} />
-              <Environment preset="city" />
-            </Suspense>
-            <OrbitControls enableZoom={false} enablePan={false} />
-          </Canvas>
+        <div className="photo-container">
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="profile-photo"
+            onError={(e) => {
+              // fallback to a bundled svg if profile not present yet
+              (e.currentTarget as HTMLImageElement).src = '/vite.svg';
+            }}
+          />
         </div>
       </div>
     </div>
