@@ -59,6 +59,32 @@ const CV = () => (
 );
 const Projects = () => <div className="page"><h1>Personal Projects</h1></div>;
 
+const CareerGoals = () => (
+  <div className="page goals-page">
+    <h1>Career Goals</h1>
+    <div className="goals-grid">
+      <section className="goal-card">
+        <h2>In 5 years</h2>
+        <p>
+          Being a part of robotics research that has moved the needle on improving surgery while making it significantly more accessible to people in rural areas. Working on the software and electrical systems of robots to further Human Robot Interaction research while continuing to critically analyze the impact of the technology I’m creating/contributing to and evaluating the ethical concerns of robotics.
+        </p>
+      </section>
+      <section className="goal-card">
+        <h2>In 10 years</h2>
+        <p>
+          Leading the advancement of robotic technologies being integrated into the daily lives of people to help enable young women to be able to work while having families, and for surgery to be accessible while being less invasive. Working in tandem with a robot in the home or the lab, being able to dance with people and robots, seeing a world that completely transformed the world I see around me today, something like my favorite sci-fi movies I have grown up watching. Continuing to evaluate the ethical impact of robots and ensuring this technology aligns with my goal of contributing to technology that improves the quality of life for people.
+        </p>
+      </section>
+      <section className="goal-card">
+        <h2>What I’m still working on</h2>
+        <p>
+          I need to spend more time conducting and contributing to Robotics research as part of a lab setting. In addition to that, having conversations with Roboticists or those in the robotics industry who may be in positions relating to Human Robot interaction or surgical robotics to better understand their perspectives while getting advice. Time management is one of the biggest skills I need to master and learn in order to be able to reach this goal because lacking mastery of this skill is preventing me from being able to dedicate time to the commitments that are important to me.
+        </p>
+      </section>
+    </div>
+  </div>
+);
+
 function App() {
   return (
     <>
@@ -77,6 +103,7 @@ function App() {
             <Link to="/movies">Movies & TV</Link>
             <Link to="/cv">CV</Link>
             <Link to="/projects">Projects</Link>
+            <Link to="/career-goals">Career Goals</Link>
           </div>
         </div>
       </nav>
@@ -89,6 +116,7 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/cv" element={<CV />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/career-goals" element={<CareerGoals />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
