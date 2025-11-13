@@ -47,7 +47,22 @@ const Home = () => {
 const Robotics = () => <div className="page"><h1>Robotics</h1></div>;
 const Dancing = () => <div className="page"><h1>Dancing & Music</h1></div>;
 const Movies = () => <div className="page"><h1>Movies & TV Shows</h1></div>;
-const CV = () => <div className="page"><h1>My CV</h1></div>;
+const CV = () => (
+  <div className="page cv-container">
+    <h1>My CV</h1>
+    <div className="cv-actions">
+      <a className="download-btn" href="Master%20Resume.docx.pdf" download>
+        Download PDF
+      </a>
+      <a className="view-btn" href="Master%20Resume.docx.pdf" target="_blank" rel="noreferrer">
+        Open in new tab
+      </a>
+    </div>
+    <div className="cv-embed">
+      <iframe title="CV" src="Master%20Resume.docx.pdf#toolbar=0" loading="lazy"></iframe>
+    </div>
+  </div>
+);
 const Projects = () => <div className="page"><h1>Personal Projects</h1></div>;
 
 function App() {
