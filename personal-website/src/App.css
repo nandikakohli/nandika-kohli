@@ -27,8 +27,42 @@
   --body-font: 'Playfair Display', serif;
 }
 
+/* Movies & TV page */
+.movies-page h1 {
+  margin-bottom: 1.5rem;
+}
+
+.checklist {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 0;
+}
+
+.checklist li label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--card-bg);
+  border: 1px solid rgba(140, 88, 137, 0.15);
+  border-radius: 10px;
+}
+
+.checklist input[type="checkbox"] {
+  accent-color: var(--muted-purple);
+}
+
+.checked .rating {
+  color: var(--rose-pink);
+  margin-left: 0.4rem;
+}
 /* Projects page */
 .projects-page {
+  font-family: var(--heading-font);
+}
+
+.projects-page, .projects-page * {
   font-family: var(--heading-font);
 }
 
@@ -57,6 +91,10 @@
   border-radius: 14px;
   box-shadow: var(--shadow);
   padding: 1rem;
+}
+
+.project-card.no-media {
+  grid-template-columns: 1fr;
 }
 
 .project-media {
@@ -246,14 +284,7 @@ p, li, a, button, input, textarea, select {
 }
 
 .home-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(252, 168, 142, 0.1) 0%, transparent 50%);
-  z-index: 0;
+  content: none;
 }
 
 .content {
@@ -391,18 +422,7 @@ h1 {
 }
 
 /* Add a subtle gradient overlay to the canvas */
-.canvas-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(252, 168, 142, 0.1) 0%, rgba(218, 123, 145, 0.1) 100%);
-  pointer-events: none;
-  z-index: 1;
-  border-radius: 16px;
-}
+.canvas-container::before { content: none; }
 
 /* Other Pages */
 .page {
@@ -463,18 +483,20 @@ h1 {
 }
 
 /* Add a subtle pattern to the background */
-.page::before {
-  content: '';
+.page::before { content: none; }
+
+/* Plain rectangle behind hero content */
+.hero-figure {
   position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(var(--rose-pink) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.1;
-  z-index: -1;
-  pointer-events: none;
+  top: 12%;
+  width: 62%;
+  height: 70%;
+  background: var(--warm-cream);
+  border: 1px solid rgba(140, 88, 137, 0.18);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  z-index: 0;
 }
 
 /* Career Goals page */
@@ -518,8 +540,78 @@ h1 {
   line-height: 1.9;
 }
 
+/* Movies page */
+.movies-page {
+  padding: 8rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.movie-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(140, 88, 137, 0.15);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(252, 168, 142, 0.15), transparent 50%);
+  pointer-events: none;
+}
+
+.movie-card h2 {
+  font-family: var(--heading-font);
+  color: var(--deep-blue);
+  margin-bottom: 0.75rem;
+}
+
+.movie-card p {
+  color: var(--text-light);
+  font-family: var(--body-font);
+  line-height: 1.9;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(140, 88, 137, 0.1);
+}
+
+.checklist li:last-child {
+  border-bottom: none;
+}
+
+.checklist li::before {
+  content: '\2713';
+  font-size: 1.2rem;
+  color: var(--muted-purple);
+  margin-right: 0.5rem;
+}
+
 @media (max-width: 992px) {
   .goals-grid {
+    grid-template-columns: 1fr;
+  }
+  .movies-grid {
     grid-template-columns: 1fr;
   }
 }

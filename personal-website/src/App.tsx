@@ -40,7 +40,51 @@ const Home = () => {
 };
 const Robotics = () => <div className="page"><h1>Robotics</h1></div>;
 const Dancing = () => <div className="page"><h1>Dancing & Music</h1></div>;
-const Movies = () => <div className="page"><h1>Movies & TV Shows</h1></div>;
+const Movies = () => (
+  <div className="page movies-page">
+    <h1>Movies & TV Shows</h1>
+    <ul className="checklist">
+      <li><label><input type="checkbox" /> Solo Leveling</label></li>
+      <li><label><input type="checkbox" /> Beyond Journey’s End</label></li>
+      <li><label><input type="checkbox" /> It’s a Wonderful Life</label></li>
+      <li><label><input type="checkbox" /> Revolutionary Road (2008)</label></li>
+      <li><label><input type="checkbox" /> The Butterfly Effect</label></li>
+      <li><label><input type="checkbox" /> Fatal Attraction</label></li>
+      <li><label><input type="checkbox" /> Mickey 17</label></li>
+      <li><label><input type="checkbox" /> Pachinko</label></li>
+      <li><label><input type="checkbox" /> The Alto Knights</label></li>
+      <li><label><input type="checkbox" /> Novocaine</label></li>
+      <li><label><input type="checkbox" /> Fly Me to the Moon (Apple)</label></li>
+      <li><label><input type="checkbox" /> Amazon — Red One</label></li>
+      <li><label><input type="checkbox" /> Horizon: An American Saga — Chapter 1</label></li>
+      <li><label><input type="checkbox" /> Megalopolis</label></li>
+      <li><label><input type="checkbox" /> Doctor Who (David Tennant)</label></li>
+      <li><label><input type="checkbox" /> Severance</label></li>
+      <li><label><input type="checkbox" /> Life is Beautiful</label></li>
+      <li><label><input type="checkbox" /> Sense and Sensibility</label></li>
+      <li><label><input type="checkbox" /> Brooklyn Nine-Nine</label></li>
+      <li><label><input type="checkbox" /> When Life Gives You Tangerines</label></li>
+      <li><label><input type="checkbox" /> The Lonely and Great God</label></li>
+      <li><label><input type="checkbox" /> New Girl</label></li>
+      <li className="checked"><label><input type="checkbox" defaultChecked /> Apothecary Diaries <span className="rating">★★★★★</span></label></li>
+      <li><label><input type="checkbox" /> Murderbot — on Apple TV</label></li>
+      <li><label><input type="checkbox" /> Alien Earth</label></li>
+      <li><label><input type="checkbox" /> Samspeed</label></li>
+      <li><label><input type="checkbox" /> The Devil Wears Prada</label></li>
+      <li><label><input type="checkbox" /> Death Note — with Hannah and Olivia</label></li>
+      <li><label><input type="checkbox" /> Bon Appétit</label></li>
+      <li><label><input type="checkbox" /> Love on the Brain</label></li>
+      <li><label><input type="checkbox" /> Manacled</label></li>
+      <li><label><input type="checkbox" /> Top Boy</label></li>
+      <li><label><input type="checkbox" /> Ocean's 8</label></li>
+      <li><label><input type="checkbox" /> Ocean's 11</label></li>
+      <li><label><input type="checkbox" /> Bodies Bodies Bodies</label></li>
+      <li><label><input type="checkbox" /> Train to Busan</label></li>
+      <li><label><input type="checkbox" /> My Fault</label></li>
+      <li><label><input type="checkbox" /> Maxton Hall</label></li>
+    </ul>
+  </div>
+);
 const CV = () => (
   <div className="page cv-container">
     <h1>My CV</h1>
@@ -63,14 +107,7 @@ const Projects = () => (
     <div className="timeline">
       <section className="year-group">
         <h2>2021–2022</h2>
-        <div className="project-card">
-          <div className="project-media">
-            <img
-              src="projects/ftc-6038.jpg"
-              alt="FTC Team 6038 hardware subteam"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
+        <div className="project-card no-media">
           <div className="project-body">
             <h3>FTC Team 6038 — Hardware Subteam Member</h3>
             <ul>
@@ -90,7 +127,7 @@ const Projects = () => (
           <div className="project-media">
             <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
             <img
-              src="projects/primary-care-setup.jpg"
+              src="WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
               alt="Primary care demo setup"
               onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
             />
@@ -112,14 +149,7 @@ const Projects = () => (
 
       <section className="year-group">
         <h2>2022–2023</h2>
-        <div className="project-card">
-          <div className="project-media">
-            <img
-              src="projects/ftc-7128-trifold.jpg"
-              alt="FTC 7128 trifold at competition"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
+        <div className="project-card no-media">
           <div className="project-body">
             <h3>FTC Team 7128 — Team Lead</h3>
             <ul>
@@ -133,14 +163,7 @@ const Projects = () => (
             </ul>
           </div>
         </div>
-        <div className="project-card">
-          <div className="project-media">
-            <img
-              src="projects/ftc-robot-7128.jpg"
-              alt="FTC robot with streamers and googly eyes"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
+        <div className="project-card no-media">
           <div className="project-body">
             <h3>Outreach Lead for Events</h3>
             <ul>
@@ -157,14 +180,7 @@ const Projects = () => (
 
       <section className="year-group">
         <h2>2023–2024</h2>
-        <div className="project-card">
-          <div className="project-media">
-            <img
-              src="projects/frc-vision.jpg"
-              alt="FRC computer vision and AprilTag detection"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
+        <div className="project-card no-media">
           <div className="project-body">
             <h3>FRC Software — Computer Vision Subteam Member and Technical Project Lead</h3>
             <ul>
@@ -179,14 +195,7 @@ const Projects = () => (
 
       <section className="year-group">
         <h2>2024–2025</h2>
-        <div className="project-card">
-          <div className="project-media">
-            <img
-              src="projects/frc-systems.jpg"
-              alt="FRC systems leadership and Minion bot"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
+        <div className="project-card no-media">
           <div className="project-body">
             <h3>FRC Systems Lead</h3>
             <ul>
@@ -198,14 +207,7 @@ const Projects = () => (
             </ul>
           </div>
         </div>
-        <div className="project-card">
-          <div className="project-media">
-            <img
-              src="projects/club-president.jpg"
-              alt="Club leadership and presentations"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
+        <div className="project-card no-media">
           <div className="project-body">
             <h3>Club President</h3>
             <ul>
@@ -224,14 +226,7 @@ const Projects = () => (
 
       <section className="year-group">
         <h2>2023–2024 Summer</h2>
-        <div className="project-card">
-          <div className="project-media">
-            <img
-              src="projects/simr-bioeng.jpg"
-              alt="SIMR bioengineering institute"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
+        <div className="project-card no-media">
           <div className="project-body">
             <h3>SIMR Bioengineering Institute</h3>
             <ul>
