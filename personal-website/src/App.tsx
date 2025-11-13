@@ -15,8 +15,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="text-content"
         >
-          <h1>Hello, I'm <span className="highlight">Nandika</span></h1>
-          <p className="subtitle">Robotics Enthusiast • Dancer • Movie Lover</p>
+          <h1>Hi, I'm <span className="highlight">Nandika</span></h1>
           <section className="blurb">
             <p>Hi I’m Nandika!</p>
             <p>I’m an aspiring roboticist excited to create humanoids and surgical robots to improve medical treatment because I strongly believe that being healthy is a human right. I’m always looking to learn and gain more well rounded and nuanced perspectives.</p>
