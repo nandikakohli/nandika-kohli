@@ -23,12 +23,12 @@ const Home = () => {
         </motion.div>
         <div className="photo-container">
           <img
-            src="/profile.jpg"
+            src="profile.jpg"
             alt="Profile"
             className="profile-photo"
             onError={(e) => {
               // fallback to a bundled svg if profile not present yet
-              (e.currentTarget as HTMLImageElement).src = '/vite.svg';
+              (e.currentTarget as HTMLImageElement).src = 'vite.svg';
             }}
           />
         </div>
@@ -72,6 +72,7 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/cv" element={<CV />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
     </>
