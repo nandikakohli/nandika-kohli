@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
+// Vite configuration for GitHub Pages project site
+// The base must match the repository name so assets resolve under /<repo>/
 export default defineConfig({
-  base: '/nandika-kohli/',
   plugins: [react()],
-})
+  base: '/nandika-kohli/',
+});
