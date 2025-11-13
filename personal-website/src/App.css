@@ -333,6 +333,21 @@ h1 {
   max-width: 32rem;
 }
 
+/* Home notice box */
+.notice-box {
+  margin: 0 0 1rem 0;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid rgba(140, 88, 137, 0.18);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  font-family: var(--heading-font);
+  color: var(--deep-blue);
+}
+
+.notice-strong { color: var(--muted-purple); font-weight: 600; }
+.notice-em { color: var(--rose-pink); font-weight: 600; }
+
 /* Intro blurb card */
 .blurb {
   margin: 1rem 0 0;
