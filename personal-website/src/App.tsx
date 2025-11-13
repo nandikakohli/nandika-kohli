@@ -89,6 +89,11 @@ const Projects = () => (
         <div className="project-card">
           <div className="project-media">
             <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
+            <img
+              src="projects/primary-care-setup.jpg"
+              alt="Primary care demo setup"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
+            />
           </div>
           <div className="project-body">
             <h3>Primary Care — Research Poster</h3>
