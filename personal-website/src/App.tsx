@@ -1,12 +1,13 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import FlowersGarden from './components/FlowersGarden';
+// import FlowersGarden from './components/FlowersGarden';
 import './App.css';
 
 const Home = () => {
   return (
     <div className="home-container">
-      <FlowersGarden />
+      {/* <FlowersGarden /> */}
+      <figure className="hero-figure"></figure>
       <div className="content">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,6 +17,13 @@ const Home = () => {
         >
           <h1>Hello, I'm <span className="highlight">Nandika</span></h1>
           <p className="subtitle">Robotics Enthusiast • Dancer • Movie Lover</p>
+          <section className="blurb">
+            <p>Hi I’m Nandika!</p>
+            <p>I’m an aspiring roboticist excited to create humanoids and surgical robots to improve medical treatment because I strongly believe that being healthy is a human right. I’m always looking to learn and gain more well rounded and nuanced perspectives.</p>
+            <p>Here's where my head is at right now: I believe consistent sustained effort is crucial to gaining the technical and interpersonal skills that will enable me to contribute to the robotics solutions I want to see in the world. Respecting everything — whether it be the people I find myself lucky enough to call friends and mentors or the butterflies that I’m delighted to see every time I walk through Tech Square — is a non-negotiable for me.</p>
+            <p>Currently I approach problems with the aim of building or adopting systems to enable a certain objective. As someone who enjoys discussions, I find that I am able to deepen my own understanding by constantly questioning and thinking through the various modalities of a problem.</p>
+            <p>Outside of robotics or reading research I’m an avowed boba and rose green tea addict. I love to watch movies and TV shows (I also love recommendations, keep scrolling to learn more!), I enjoy dancing, I love to hang out with friends, yap and watch sunsets.</p>
+          </section>
           <div className="cta-buttons">
             <Link to="/cv" className="cta-button primary">View My CV</Link>
             <Link to="/projects" className="cta-button secondary">See Projects</Link>
