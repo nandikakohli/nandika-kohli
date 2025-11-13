@@ -15,7 +15,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="text-content"
         >
-          <h1>Hi, I'm <span className="highlight">Nandika</span></h1>
+          <h1>Hi! I'm <span className="highlight">Nandika</span></h1>
           <section className="blurb">
             <p>I’m an aspiring roboticist excited to create humanoids and surgical robots to improve medical treatment because I strongly believe that being healthy is a human right. I’m always looking to learn and gain more well rounded and nuanced perspectives.</p>
             <p>Here's where my head is at right now: I believe consistent sustained effort is crucial to gaining the technical and interpersonal skills that will enable me to contribute to the robotics solutions I want to see in the world. Respecting everything — whether it be the people I find myself lucky enough to call friends and mentors or the butterflies that I’m delighted to see every time I walk through Tech Square — is a non-negotiable for me.</p>
