@@ -3,6 +3,15 @@ import { motion } from 'framer-motion';
 // import FlowersGarden from './components/FlowersGarden';
 import './App.css';
 
+const UNDER_CONSTRUCTION = true;
+
+const UnderConstruction = () => (
+  <div className="page under-construction">
+    <h1>Website Under Construction</h1>
+    <p>Thank you for visiting. This site is currently being updated. Please check back soon.</p>
+  </div>
+);
+
 const Home = () => {
   return (
     <div className="home-container">
@@ -307,6 +316,14 @@ const CareerGoals = () => (
 );
 
 function App() {
+  if (UNDER_CONSTRUCTION) {
+    return (
+      <main>
+        <UnderConstruction />
+      </main>
+    );
+  }
+
   return (
     <>
       <nav className="navbar">
