@@ -23,7 +23,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="text-content"
         >
-          <h1>Hi! I'm <span className="highlight">Nandika</span></h1>
+          <h1>Hi I'm <span className="highlight">Nandika</span>!</h1>
           <section className="notice-box">
             <span className="notice-strong">Note:</span> This website is still being edited for style and readability. <span className="notice-em">Stay tuned for updates!</span>
           </section>
