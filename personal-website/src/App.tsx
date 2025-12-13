@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 // import FlowersGarden from './components/FlowersGarden';
 import './App.css';
 
-const UNDER_CONSTRUCTION = true;
+const UNDER_CONSTRUCTION = false;
 
 const UnderConstruction = () => (
   <div className="page under-construction">
