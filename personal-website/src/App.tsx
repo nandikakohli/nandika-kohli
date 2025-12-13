@@ -46,24 +46,107 @@ const Home = () => {
     </div>
   );
 };
+
+// Active components - showing "under construction" message
 const Robotics = () => (
   <div className="page">
     <h1>Robotics</h1>
     <p>This page is temporarily unavailable and under construction. Please check back later.</p>
   </div>
 );
+
 const Dancing = () => (
   <div className="page">
     <h1>Dancing & Music</h1>
     <p>This page is temporarily unavailable and under construction. Please check back later.</p>
   </div>
 );
+
 const Movies = () => (
   <div className="page movies-page">
     <h1>Movies & TV Shows</h1>
     <p>This page is temporarily unavailable and under construction. Please check back later.</p>
   </div>
 );
+
+const CV = () => (
+  <div className="page cv-container">
+    <h1>My CV</h1>
+    <p>This page is temporarily unavailable and under construction. Please check back later.</p>
+  </div>
+);
+
+const Projects = () => (
+  <div className="page projects-page">
+    <h1>Personal Projects</h1>
+    <p>This page is temporarily unavailable and under construction. Please check back later.</p>
+  </div>
+);
+
+const CareerGoals = () => (
+  <div className="page goals-page">
+    <h1>Career Goals</h1>
+    <p>This page is temporarily unavailable and under construction. Please check back later.</p>
+  </div>
+);
+
+/* ============================================================================
+   BACKUP CODE - COMMENTED OUT FOR EASY RESTORATION
+   To restore a page, uncomment its component below and replace the active 
+   component above with the restored version.
+   ============================================================================ */
+
+// Original Movies component - uncomment to restore
+/*
+const Movies = () => (
+  <div className="page movies-page">
+    <h1>Movies & TV Shows</h1>
+    <ul className="checklist">
+      <li><label><input type="checkbox" /> Solo Leveling</label></li>
+      <li><label><input type="checkbox" /> Beyond Journey's End</label></li>
+      <li><label><input type="checkbox" /> It's a Wonderful Life</label></li>
+      <li><label><input type="checkbox" /> Revolutionary Road (2008)</label></li>
+      <li><label><input type="checkbox" /> The Butterfly Effect</label></li>
+      <li><label><input type="checkbox" /> Fatal Attraction</label></li>
+      <li><label><input type="checkbox" /> Mickey 17</label></li>
+      <li><label><input type="checkbox" /> Pachinko</label></li>
+      <li><label><input type="checkbox" /> The Alto Knights</label></li>
+      <li><label><input type="checkbox" /> Novocaine</label></li>
+      <li><label><input type="checkbox" /> Fly Me to the Moon (Apple)</label></li>
+      <li><label><input type="checkbox" /> Amazon — Red One</label></li>
+      <li><label><input type="checkbox" /> Horizon: An American Saga — Chapter 1</label></li>
+      <li><label><input type="checkbox" /> Megalopolis</label></li>
+      <li><label><input type="checkbox" /> Doctor Who (David Tennant)</label></li>
+      <li><label><input type="checkbox" /> Severance</label></li>
+      <li><label><input type="checkbox" /> Life is Beautiful</label></li>
+      <li><label><input type="checkbox" /> Sense and Sensibility</label></li>
+      <li><label><input type="checkbox" /> Brooklyn Nine-Nine</label></li>
+      <li><label><input type="checkbox" /> When Life Gives You Tangerines</label></li>
+      <li><label><input type="checkbox" /> The Lonely and Great God</label></li>
+      <li><label><input type="checkbox" /> New Girl</label></li>
+      <li className="checked"><label><input type="checkbox" defaultChecked /> Apothecary Diaries <span className="rating">★★★★★</span></label></li>
+      <li><label><input type="checkbox" /> Murderbot — on Apple TV</label></li>
+      <li><label><input type="checkbox" /> Alien Earth</label></li>
+      <li><label><input type="checkbox" /> Samspeed</label></li>
+      <li><label><input type="checkbox" /> The Devil Wears Prada</label></li>
+      <li><label><input type="checkbox" /> Death Note — with Hannah and Olivia</label></li>
+      <li><label><input type="checkbox" /> Bon Appétit</label></li>
+      <li><label><input type="checkbox" /> Love on the Brain</label></li>
+      <li><label><input type="checkbox" /> Manacled</label></li>
+      <li><label><input type="checkbox" /> Top Boy</label></li>
+      <li><label><input type="checkbox" /> Ocean's 8</label></li>
+      <li><label><input type="checkbox" /> Ocean's 11</label></li>
+      <li><label><input type="checkbox" /> Bodies Bodies Bodies</label></li>
+      <li><label><input type="checkbox" /> Train to Busan</label></li>
+      <li><label><input type="checkbox" /> My Fault</label></li>
+      <li><label><input type="checkbox" /> Maxton Hall</label></li>
+    </ul>
+  </div>
+);
+*/
+
+// Original CV component - uncomment to restore
+/*
 const CV = () => (
   <div className="page cv-container">
     <h1>My CV</h1>
@@ -80,12 +163,14 @@ const CV = () => (
     </div>
   </div>
 );
+*/
+
+// Original Projects component - uncomment to restore
+/*
 const Projects = () => (
   <div className="page projects-page">
     <h1>Personal Projects</h1>
-    <p>This page is temporarily unavailable and under construction. Please check back later.</p>
-  </div>
-);
+    <div className="timeline">
       <section className="year-group">
         <h2>2021–2022</h2>
         <div className="project-card no-media">
@@ -257,13 +342,36 @@ const Projects = () => (
     </div>
   </div>
 );
+*/
 
+// Original CareerGoals component - uncomment to restore
+/*
 const CareerGoals = () => (
   <div className="page goals-page">
     <h1>Career Goals</h1>
-    <p>This page is temporarily unavailable and under construction. Please check back later.</p>
+    <div className="goals-grid">
+      <section className="goal-card">
+        <h2>In 5 years</h2>
+        <p>
+          Being a part of robotics research that has moved the needle on improving surgery while making it significantly more accessible to people in rural areas. Working on the software and electrical systems of robots to further Human Robot Interaction research while continuing to critically analyze the impact of the technology I'm creating/contributing to and evaluating the ethical concerns of robotics.
+        </p>
+      </section>
+      <section className="goal-card">
+        <h2>In 10 years</h2>
+        <p>
+          Leading the advancement of robotic technologies being integrated into the daily lives of people to help enable young women to be able to work while having families, and for surgery to be accessible while being less invasive. Working in tandem with a robot in the home or the lab, being able to dance with people and robots, seeing a world that completely transformed the world I see around me today, something like my favorite sci-fi movies I have grown up watching. Continuing to evaluate the ethical impact of robots and ensuring this technology aligns with my goal of contributing to technology that improves the quality of life for people.
+        </p>
+      </section>
+      <section className="goal-card">
+        <h2>What I'm still working on</h2>
+        <p>
+          I need to spend more time conducting and contributing to Robotics research as part of a lab setting. In addition to that, having conversations with Roboticists or those in the robotics industry who may be in positions relating to Human Robot interaction or surgical robotics to better understand their perspectives while getting advice. Time management is one of the biggest skills I need to master and learn in order to be able to reach this goal because lacking mastery of this skill is preventing me from being able to dedicate time to the commitments that are important to me.
+        </p>
+      </section>
+    </div>
   </div>
 );
+*/
 
 function App() {
   if (UNDER_CONSTRUCTION) {
