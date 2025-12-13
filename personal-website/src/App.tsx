@@ -28,10 +28,7 @@ const Home = () => {
             <span className="notice-strong">Note:</span> This website is still being edited for style and readability. <span className="notice-em">Stay tuned for updates!</span>
           </section>
           <section className="blurb">
-            <p>I’m an aspiring roboticist excited to create humanoids and surgical robots to improve medical treatment because I strongly believe that being healthy is a human right. I’m always looking to learn and gain more well rounded and nuanced perspectives.</p>
-            <p>Here's where my head is at right now: I believe consistent sustained effort is crucial to gaining the technical and interpersonal skills that will enable me to contribute to the robotics solutions I want to see in the world. Respecting everything — whether it be the people I find myself lucky enough to call friends and mentors or the butterflies that I’m delighted to see every time I walk through Tech Square — is a non-negotiable for me.</p>
-            <p>Currently I approach problems with the aim of building or adopting systems to enable a certain objective. As someone who enjoys discussions, I find that I am able to deepen my own understanding by constantly questioning and thinking through the various modalities of a problem.</p>
-            <p>Outside of robotics or reading research I’m an avowed boba and rose green tea addict. I love to watch movies and TV shows (I also love recommendations, keep scrolling to learn more!), I enjoy dancing, I love to hang out with friends, yap and watch sunsets.</p>
+            <p>I'm an aspiring roboticist excited to create humanoids and surgical robots to improve medical treatment because I strongly believe that being healthy is a human right. I'm always looking to learn and gain more well rounded and nuanced perspectives. Here's where my head is at right now: I believe consistent sustained effort is crucial to gaining the technical and interpersonal skills that will enable me to contribute to the robotics solutions I want to see in the world, respecting everything whether it be the people I find myself lucky enough to call friends and mentors or the butterflies that I'm delighted to see every time I walk through Tech Square is a non-negotiable for me. Currently I approach problems with the aim of building or adopting systems to enable a certain objective. As someone who enjoys discussions I find that I am able to deepen my own understanding by constantly questioning and thinking through the various modalities of a  problem. Outside of robotics or reading research I'm an avowed boba and rose green tea addict, I love to watch movies and TV shows (I also love recommendations, keep scrolling to learn more!), I enjoy dancing, I love to hang out with friends, yap and watch sunsets.</p>
           </section>
         </motion.div>
         <div className="photo-container">
@@ -56,8 +53,8 @@ const Movies = () => (
     <h1>Movies & TV Shows</h1>
     <ul className="checklist">
       <li><label><input type="checkbox" /> Solo Leveling</label></li>
-      <li><label><input type="checkbox" /> Beyond Journey’s End</label></li>
-      <li><label><input type="checkbox" /> It’s a Wonderful Life</label></li>
+      <li><label><input type="checkbox" /> Beyond Journey's End</label></li>
+      <li><label><input type="checkbox" /> It's a Wonderful Life</label></li>
       <li><label><input type="checkbox" /> Revolutionary Road (2008)</label></li>
       <li><label><input type="checkbox" /> The Butterfly Effect</label></li>
       <li><label><input type="checkbox" /> Fatal Attraction</label></li>
@@ -211,7 +208,7 @@ const Projects = () => (
             <h3>FRC Systems Lead</h3>
             <ul>
               <li>Created a new org structure incl. R&D and systems; mentored junior leads.</li>
-              <li>Named Raspberry Pis after minions; built “Minion Bot” to teach and dance; iterating V2 with LEDs.</li>
+              <li>Named Raspberry Pis after minions; built "Minion Bot" to teach and dance; iterating V2 with LEDs.</li>
               <li>Benchmarked Pi 5 vs Pi 4; integrated WPILib on Pi 5; confirmed performance gains.</li>
               <li>Introduced Gantt-based planning and daily Slack updates; established TED template for CV integration.</li>
               <li>Led offseason project selection with mentors; ranked top-8 at Sunset Showdown; preparing for CCC.</li>
@@ -295,7 +292,7 @@ const CareerGoals = () => (
       <section className="goal-card">
         <h2>In 5 years</h2>
         <p>
-          Being a part of robotics research that has moved the needle on improving surgery while making it significantly more accessible to people in rural areas. Working on the software and electrical systems of robots to further Human Robot Interaction research while continuing to critically analyze the impact of the technology I’m creating/contributing to and evaluating the ethical concerns of robotics.
+          Being a part of robotics research that has moved the needle on improving surgery while making it significantly more accessible to people in rural areas. Working on the software and electrical systems of robots to further Human Robot Interaction research while continuing to critically analyze the impact of the technology I'm creating/contributing to and evaluating the ethical concerns of robotics.
         </p>
       </section>
       <section className="goal-card">
@@ -305,7 +302,7 @@ const CareerGoals = () => (
         </p>
       </section>
       <section className="goal-card">
-        <h2>What I’m still working on</h2>
+        <h2>What I'm still working on</h2>
         <p>
           I need to spend more time conducting and contributing to Robotics research as part of a lab setting. In addition to that, having conversations with Roboticists or those in the robotics industry who may be in positions relating to Human Robot interaction or surgical robotics to better understand their perspectives while getting advice. Time management is one of the biggest skills I need to master and learn in order to be able to reach this goal because lacking mastery of this skill is preventing me from being able to dedicate time to the commitments that are important to me.
         </p>
