@@ -300,6 +300,7 @@ p, li, a, button, input, textarea, select {
 
 .text-content {
   text-align: left;
+  font-family: var(--heading-font);
 }
 
 h1 {
