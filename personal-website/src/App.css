@@ -368,7 +368,10 @@ h1 {
   max-width: 64rem;
 }
 
-.blurb p { margin: 0; }
+.blurb p { 
+  margin: 0;
+  font-family: var(--heading-font);
+}
 
 .cta-buttons {
   display: flex;
