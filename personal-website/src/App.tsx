@@ -86,10 +86,6 @@ const Projects = () => (
     <p>This page is temporarily unavailable and under construction. Please check back later.</p>
   </div>
 );
-const ProjectsOld = () => (
-  <div className="page projects-page">
-    <h1>Personal Projects</h1>
-    <div className="timeline">
       <section className="year-group">
         <h2>2021–2022</h2>
         <div className="project-card no-media">
