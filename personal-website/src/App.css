@@ -202,7 +202,7 @@ p, li, a, button, input, textarea, select {
 }
 
 .navbar {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
   position: fixed;
@@ -614,7 +614,7 @@ h1 {
 
 .checklist li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(140, 88, 137, 0.1);
+  border-bottom: 1px solid rgba(104, 93, 206, 0.1);
 }
 
 .checklist li:last-child {
@@ -624,7 +624,7 @@ h1 {
 .checklist li::before {
   content: '\2713';
   font-size: 1.2rem;
-  color: var(--muted-purple);
+  color: var(--vibrant-purple);
   margin-right: 0.5rem;
 }
 
