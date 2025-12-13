@@ -16,7 +16,6 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* <FlowersGarden /> */}
-      <figure className="hero-figure"></figure>
       <div className="content">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
