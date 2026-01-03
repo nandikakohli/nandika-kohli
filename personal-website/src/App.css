@@ -520,45 +520,201 @@ h1 {
   z-index: 0;
 }
 
-/* Career Goals page */
+/* Career Goals page - Tech Timeline */
 .goals-page h1 {
-  margin-bottom: 1.5rem;
-}
-
-.goals-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.goal-card {
-  background: var(--card-bg);
-  border: 1px solid rgba(104, 93, 206, 0.15);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  padding: 1.25rem 1.25rem 1.5rem;
+  margin-bottom: 3rem;
+  font-family: var(--heading-font);
   position: relative;
-  overflow: hidden;
 }
 
-.goal-card::after {
+.goals-page h1::after {
+  content: '>_';
+  color: #00ff00;
+  margin-left: 1rem;
+  opacity: 0.7;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 0.7; }
+  51%, 100% { opacity: 0.2; }
+}
+
+.career-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #00ff00 10%,
+    #00ff00 90%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.timeline-line::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(252, 168, 142, 0.15), transparent 50%);
-  pointer-events: none;
+  top: 0;
+  left: -1px;
+  width: 4px;
+  height: 20px;
+  background: #00ff00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+  animation: scan 3s linear infinite;
 }
 
-.goal-card h2 {
-  font-family: var(--heading-font);
-  color: var(--deep-blue);
-  margin-bottom: 0.75rem;
+@keyframes scan {
+  0% { top: 0; opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { top: 100%; opacity: 0; }
 }
 
-.goal-card p {
-  color: var(--text-light);
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  padding-left: 80px;
+}
+
+.timeline-node {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+}
+
+.node-core {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00ff00;
+  background: #1a1a1a;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+
+.node-core::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+.node-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00ff00;
+  border-radius: 50%;
+  animation: pulse 2s ease-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+.timeline-content {
+  background: rgba(26, 26, 26, 0.7);
+  border: 1px solid #00ff00;
+  border-left: 4px solid #00ff00;
+  padding: 1.5rem 2rem;
+  position: relative;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 0, 0.2),
+    inset 0 0 20px rgba(0, 255, 0, 0.05);
   font-family: var(--body-font);
-  line-height: 1.9;
+}
+
+.timeline-content::before {
+  content: '//';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #00ff00;
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--heading-font);
+}
+
+.timeline-year {
+  color: #00ff00;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  font-family: var(--heading-font);
+}
+
+.timeline-label {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--heading-font);
+}
+
+.timeline-body {
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-family: var(--body-font);
+}
+
+.timeline-body p {
+  margin: 0;
+  font-family: var(--body-font);
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    padding-left: 60px;
+  }
+  
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .timeline-node {
+    left: 10px;
+  }
+  
+  .timeline-content {
+    padding: 1rem 1.5rem;
+  }
 }
 
 /* Movies page */
@@ -629,9 +785,6 @@ h1 {
 }
 
 @media (max-width: 992px) {
-  .goals-grid {
-    grid-template-columns: 1fr;
-  }
   .movies-grid {
     grid-template-columns: 1fr;
   }
