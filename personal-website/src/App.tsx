@@ -113,14 +113,193 @@ const InterestsOutsideRobotics = () => (
 const CV = () => (
   <div className="page cv-container">
     <h1>My CV</h1>
-    <p>This page is temporarily unavailable and under construction. Please check back later.</p>
+    <div className="cv-actions">
+      <a className="download-btn" href="Master%20Resume.docx.pdf" download>
+        Download PDF
+      </a>
+      <a className="view-btn" href="Master%20Resume.docx.pdf" target="_blank" rel="noreferrer">
+        Open in new tab
+      </a>
+    </div>
+    <div className="cv-embed">
+      <iframe title="CV" src="Master%20Resume.docx.pdf#toolbar=0" loading="lazy"></iframe>
+    </div>
   </div>
 );
 
 const Projects = () => (
   <div className="page projects-page">
     <h1>Personal Projects</h1>
-    <p>This page is temporarily unavailable and under construction. Please check back later.</p>
+    <div className="timeline">
+      <section className="year-group">
+        <h2>2021–2022</h2>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>FTC Team 6038 — Hardware Subteam Member</h3>
+            <ul>
+              <li>Designed a rolling intake using surgical tubing to intake a cube and place it on a tiered game piece.</li>
+              <li>Learned western drivetrain design and iterated on an open chassis through the engineering process.</li>
+              <li>Contributed by asking questions, recording meeting notes, and fostering a collaborative environment.</li>
+              <li>Created a team jokes journal for competition morale and a full engineering notebook.</li>
+              <li>Learned SolidWorks and spent extra hours in the lab learning from second-years.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
+        <h2>Posters</h2>
+        <div className="project-card">
+          <div className="project-media">
+            <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
+            <img
+              src="WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
+              alt="Primary care demo setup"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
+            />
+          </div>
+          <div className="project-body">
+            <h3>Primary Care — Research Poster</h3>
+            <ul>
+              <li>View in-page preview on the left.</li>
+              <li>
+                <a href="Primary%20Care%20-%20Poster.pdf" target="_blank" rel="noreferrer">Open full poster in new tab</a>
+              </li>
+              <li>
+                <a href="Primary%20Care%20-%20Poster.pdf" download>Download PDF</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
+        <h2>2022–2023</h2>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>FTC Team 7128 — Team Lead</h3>
+            <ul>
+              <li>Co-designed a gripping mechanism and linear slide with the hardware team.</li>
+              <li>Diagnosed chassis strafing issues; resolved by rebalancing with added front weights.</li>
+              <li>Facilitated strategy, ensured pivots when deadlines slipped, and ran after-hours syncs.</li>
+              <li>Owned documentation and engineering notebook; reanalyzed trifold format for clarity.</li>
+              <li>Rewrote content to be concise, gathered more images, and added lights to attract visitors.</li>
+              <li>Trifold later reused as a club asset for events and recruiting; designed team shirts.</li>
+              <li>Competition driver; Finalist Alliance at qualifier; won Connect Award and Impact Award.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>Outreach Lead for Events</h3>
+            <ul>
+              <li>Mentored six FLL students from a local middle school.</li>
+              <li>Partnered with The Tech Museum to demo the robot; presented to Girl Scouts and museum visitors.</li>
+              <li>Collaborated with LEAP to run international calls teaching robotics to underfunded schools.</li>
+              <li>Helped organize Fall Fest and led Kennedy Middle School night market robot demos.</li>
+              <li>Expanded skit program (minion-themed) to present robotics in an approachable way.</li>
+              <li>Led a 30-member outreach team with docs, templates, and weekly support meetings.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
+        <h2>2023–2024</h2>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>FRC Software — Computer Vision Subteam Member and Technical Project Lead</h3>
+            <ul>
+              <li>Implemented AprilTag detection used in future seasons; wrote note detection logic.</li>
+              <li>Learned camera intrinsics/extrinsics; integrated pipelines on Raspberry Pi.</li>
+              <li>Trained members as technical projects lead; coordinated camera mounting with other leads.</li>
+              <li>Designed a new camera mount; ranked top-8 alliances at CalGames and Monterey Bay Regional.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
+        <h2>2024–2025</h2>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>FRC Systems Lead</h3>
+            <ul>
+              <li>Created a new org structure incl. R&D and systems; mentored junior leads.</li>
+              <li>Named Raspberry Pis after minions; built "Minion Bot" to teach and dance; iterating V2 with LEDs.</li>
+              <li>Benchmarked Pi 5 vs Pi 4; integrated WPILib on Pi 5; confirmed performance gains.</li>
+              <li>Introduced Gantt-based planning and daily Slack updates; established TED template for CV integration.</li>
+              <li>Led offseason project selection with mentors; ranked top-8 at Sunset Showdown; preparing for CCC.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>Club President</h3>
+            <ul>
+              <li>Launched a biweekly newsletter for parents and sponsors; clarified outreach under 7 programs.</li>
+              <li>Built schedules to meet deadlines; added current-events discussions to meetings.</li>
+              <li>Presented to the FUHSD board advocating for a new robotics building.</li>
+              <li>Fostered a collaborative officer team with weekly in-person meetings and bonding.</li>
+              <li>Kept the team organized with reminders, notes, and calendar accountability.</li>
+              <li>Coordinated training sessions during lunch to maximize lab time.</li>
+              <li>Supported event prep (e.g., clubs faire trifold timeline) and mentored outreach leads.</li>
+              <li>Initiated district-wide FRC social to connect teams with a meet-and-greet.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>Discovery Project</h3>
+            <ul>
+              <li><strong>Discovery Project Idea —</strong> I wanted to create a robot (ideally based off Baymax) that is capable of moving its wheels using an Arduino. I wanted to be able to do this so I am able to learn how to use the Jazzy robot operating system (ROS) which is an ECE skill.</li>
+              <li><strong>Project Progress —</strong> I was able to get 2 motors running and then was able to press the button in order to get the motors to run in different directions. I was also able to get it working with the L248N driver board and with the arduino. I was able to begin learning how to use ROS with a simple project but still need to learn how to create more complicated projects using ROS.</li>
+              <li><strong>Project Successes and Failures —</strong> I ran into many roadblocks including being unable to understand how to get the arduino and the raspberry pi to connect to each other which caused many issues. I also wanted to learn how to be able to design a PCB</li>
+              <li><strong>ECE Skills Gained —</strong> I earned how to use and arduino, was able to learn how to code in C++, was able to begin learning PCB design, and was able to learn how to integrate these components together</li>
+              <li><strong>Final thoughts —</strong> This has confirmed my interest in being a Computer Engineering major and in Robotics. However, I have realized that I need to work on my time management in order to be able to complete the project and achieve the results I want in college.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
+        <h2>2023–2024 Summer</h2>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>SIMR Bioengineering Institute</h3>
+            <ul>
+              <li>Built a heat sensor with Arduino in a microcontrollers workshop.</li>
+              <li>Wrote an abstract on combining insulin and GLP-1 RA delivery; filed a provisional IP patent.</li>
+              <li>Deepened interest in medicine via guest lectures and emerging research.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="year-group">
+        <h2>Project Video</h2>
+        <div className="project-card">
+          <div className="project-media">
+            <iframe
+              title="Project Demo Video"
+              src="https://drive.google.com/file/d/1JsCp0ueAmrl4o8AKtZpQTNvjouUOIKE2/preview"
+              loading="lazy"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="project-body">
+            <h3>Discovery Project – Demo Video</h3>
+            <ul>
+              <li>
+                <a href="https://drive.google.com/file/d/1JsCp0ueAmrl4o8AKtZpQTNvjouUOIKE2/view?usp=sharing" target="_blank" rel="noreferrer">
+                  Open video in a new tab
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 );
 
