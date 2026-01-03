@@ -320,9 +320,10 @@ const CareerGoals = () => (
             <span className="timeline-label">What I'm still working on</span>
           </div>
           <div className="timeline-body">
-            <p>
-              I need to spend more time conducting and contributing to Robotics research as part of a lab setting. In addition to that, having conversations with Roboticists or those in the robotics industry who may be in positions relating to Human Robot interaction or surgical robotics to better understand their perspectives while getting advice. Time management is one of the biggest skills I need to master and learn in order to be able to reach this goal because lacking mastery of this skill is preventing me from being able to dedicate time to the commitments that are important to me.
-            </p>
+            <ul>
+              <li>Conducting and contributing to Robotics research as part of a lab setting.</li>
+              <li>Exploring surgical robotics and humanoid robotics in industry through reading and conversing with roboticists to gain a more nuanced perspective of research and industry.</li>
+            </ul>
           </div>
         </div>
       </div>
