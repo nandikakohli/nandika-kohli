@@ -316,6 +316,24 @@ const CareerGoals = () => (
         </div>
         <div className="timeline-content">
           <div className="timeline-header">
+            <span className="timeline-year">NOW</span>
+            <span className="timeline-label">What I'm still working on</span>
+          </div>
+          <div className="timeline-body">
+            <p>
+              I need to spend more time conducting and contributing to Robotics research as part of a lab setting. In addition to that, having conversations with Roboticists or those in the robotics industry who may be in positions relating to Human Robot interaction or surgical robotics to better understand their perspectives while getting advice. Time management is one of the biggest skills I need to master and learn in order to be able to reach this goal because lacking mastery of this skill is preventing me from being able to dedicate time to the commitments that are important to me.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="timeline-item">
+        <div className="timeline-node">
+          <div className="node-pulse"></div>
+          <div className="node-core"></div>
+        </div>
+        <div className="timeline-content">
+          <div className="timeline-header">
             <span className="timeline-year">2029</span>
             <span className="timeline-label">In 5 years</span>
           </div>
@@ -342,24 +360,6 @@ const CareerGoals = () => (
           <div className="timeline-body">
             <p>
               Leading the advancement of robotic technologies being integrated into the daily lives of people to help enable young women to be able to work while having families, and for surgery to be accessible while being less invasive. Working in tandem with a robot in the home or the lab, being able to dance with people and robots, seeing a world that completely transformed the world I see around me today, something like my favorite sci-fi movies I have grown up watching. Continuing to evaluate the ethical impact of robots and ensuring this technology aligns with my goal of contributing to technology that improves the quality of life for people.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="timeline-item">
-        <div className="timeline-node">
-          <div className="node-pulse"></div>
-          <div className="node-core"></div>
-        </div>
-        <div className="timeline-content">
-          <div className="timeline-header">
-            <span className="timeline-year">NOW</span>
-            <span className="timeline-label">What I'm still working on</span>
-          </div>
-          <div className="timeline-body">
-            <p>
-              I need to spend more time conducting and contributing to Robotics research as part of a lab setting. In addition to that, having conversations with Roboticists or those in the robotics industry who may be in positions relating to Human Robot interaction or surgical robotics to better understand their perspectives while getting advice. Time management is one of the biggest skills I need to master and learn in order to be able to reach this goal because lacking mastery of this skill is preventing me from being able to dedicate time to the commitments that are important to me.
             </p>
           </div>
         </div>
