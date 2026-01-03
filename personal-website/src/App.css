@@ -701,7 +701,7 @@ h1 {
 .profile-photo {
   width: 320px;
   height: 320px;
-  border-radius: 50%;
+  border-radius: 8px;
   object-fit: cover;
   box-shadow: var(--shadow);
   border: 6px solid rgba(255, 255, 255, 0.7);
