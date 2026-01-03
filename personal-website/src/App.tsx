@@ -148,7 +148,7 @@ const Projects = () => (
       </section>
 
       <section className="year-group">
-        <h2>Posters</h2>
+        <h2>2022–2023</h2>
         <div className="project-card">
           <div className="project-media">
             <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
@@ -275,8 +275,74 @@ const Projects = () => (
           </div>
         </div>
       </section>
+
       <section className="year-group">
-        <h2>Project Video</h2>
+        <h2>Research</h2>
+        <div className="project-card">
+          <div className="project-media">
+            <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
+            <img
+              src="WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
+              alt="Primary care demo setup"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
+            />
+          </div>
+          <div className="project-body">
+            <h3>Primary Care — Research Poster</h3>
+            <ul>
+              <li>View in-page preview on the left.</li>
+              <li>
+                <a href="Primary%20Care%20-%20Poster.pdf" target="_blank" rel="noreferrer">Open full poster in new tab</a>
+              </li>
+              <li>
+                <a href="Primary%20Care%20-%20Poster.pdf" download>Download PDF</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
+        <h2>2024–2025</h2>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>FRC Systems Lead</h3>
+            <ul>
+              <li>Created a new org structure incl. R&D and systems; mentored junior leads.</li>
+              <li>Named Raspberry Pis after minions; built "Minion Bot" to teach and dance; iterating V2 with LEDs.</li>
+              <li>Benchmarked Pi 5 vs Pi 4; integrated WPILib on Pi 5; confirmed performance gains.</li>
+              <li>Introduced Gantt-based planning and daily Slack updates; established TED template for CV integration.</li>
+              <li>Led offseason project selection with mentors; ranked top-8 at Sunset Showdown; preparing for CCC.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>Club President</h3>
+            <ul>
+              <li>Launched a biweekly newsletter for parents and sponsors; clarified outreach under 7 programs.</li>
+              <li>Built schedules to meet deadlines; added current-events discussions to meetings.</li>
+              <li>Presented to the FUHSD board advocating for a new robotics building.</li>
+              <li>Fostered a collaborative officer team with weekly in-person meetings and bonding.</li>
+              <li>Kept the team organized with reminders, notes, and calendar accountability.</li>
+              <li>Coordinated training sessions during lunch to maximize lab time.</li>
+              <li>Supported event prep (e.g., clubs faire trifold timeline) and mentored outreach leads.</li>
+              <li>Initiated district-wide FRC social to connect teams with a meet-and-greet.</li>
+            </ul>
+          </div>
+        </div>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>Discovery Project</h3>
+            <ul>
+              <li><strong>Discovery Project Idea —</strong> I wanted to create a robot (ideally based off Baymax) that is capable of moving its wheels using an Arduino. I wanted to be able to do this so I am able to learn how to use the Jazzy robot operating system (ROS) which is an ECE skill.</li>
+              <li><strong>Project Progress —</strong> I was able to get 2 motors running and then was able to press the button in order to get the motors to run in different directions. I was also able to get it working with the L248N driver board and with the arduino. I was able to begin learning how to use ROS with a simple project but still need to learn how to create more complicated projects using ROS.</li>
+              <li><strong>Project Successes and Failures —</strong> I ran into many roadblocks including being unable to understand how to get the arduino and the raspberry pi to connect to each other which caused many issues. I also wanted to learn how to be able to design a PCB</li>
+              <li><strong>ECE Skills Gained —</strong> I earned how to use and arduino, was able to learn how to code in C++, was able to begin learning PCB design, and was able to learn how to integrate these components together</li>
+              <li><strong>Final thoughts —</strong> This has confirmed my interest in being a Computer Engineering major and in Robotics. However, I have realized that I need to work on my time management in order to be able to complete the project and achieve the results I want in college.</li>
+            </ul>
+          </div>
+        </div>
         <div className="project-card">
           <div className="project-media">
             <iframe
