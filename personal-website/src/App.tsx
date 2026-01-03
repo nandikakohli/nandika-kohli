@@ -347,24 +347,6 @@ const CareerGoals = () => (
           </div>
         </div>
       </div>
-
-      <div className="timeline-item">
-        <div className="timeline-node">
-          <div className="node-pulse"></div>
-          <div className="node-core"></div>
-        </div>
-        <div className="timeline-content">
-          <div className="timeline-header">
-            <span className="timeline-year">2034</span>
-            <span className="timeline-label">In 10 years</span>
-          </div>
-          <div className="timeline-body">
-            <p>
-              Leading the advancement of robotic technologies being integrated into the daily lives of people to help enable young women to be able to work while having families, and for surgery to be accessible while being less invasive. Working in tandem with a robot in the home or the lab, being able to dance with people and robots, seeing a world that completely transformed the world I see around me today, something like my favorite sci-fi movies I have grown up watching. Continuing to evaluate the ethical impact of robots and ensuring this technology aligns with my goal of contributing to technology that improves the quality of life for people.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 );
