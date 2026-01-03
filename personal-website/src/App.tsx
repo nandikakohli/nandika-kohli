@@ -149,32 +149,6 @@ const Projects = () => (
 
       <section className="year-group">
         <h2>2022–2023</h2>
-        <div className="project-card">
-          <div className="project-media">
-            <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
-            <img
-              src="WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
-              alt="Primary care demo setup"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
-          <div className="project-body">
-            <h3>Primary Care — Research Poster</h3>
-            <ul>
-              <li>View in-page preview on the left.</li>
-              <li>
-                <a href="Primary%20Care%20-%20Poster.pdf" target="_blank" rel="noreferrer">Open full poster in new tab</a>
-              </li>
-              <li>
-                <a href="Primary%20Care%20-%20Poster.pdf" download>Download PDF</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="year-group">
-        <h2>2022–2023</h2>
         <div className="project-card no-media">
           <div className="project-body">
             <h3>FTC Team 7128 — Team Lead</h3>
