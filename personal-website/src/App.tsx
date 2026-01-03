@@ -33,12 +33,12 @@ const Home = () => {
         </motion.div>
         <div className="photo-container">
           <img
-            src="profile.jpg"
+            src="profile-new.jpeg"
             alt="Profile"
             className="profile-photo"
             onError={(e) => {
-              // fallback to a bundled svg if profile not present yet
-              (e.currentTarget as HTMLImageElement).src = 'vite.svg';
+              // fallback to backup profile if new one not present yet
+              (e.currentTarget as HTMLImageElement).src = 'profile-backup.jpg';
             }}
           />
         </div>
