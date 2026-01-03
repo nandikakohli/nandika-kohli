@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   /* Blue/Purple Theme Colors - Inspired by Sunset Palettes */
@@ -16,7 +16,7 @@
   --primary-dark: var(--muted-purple);
   --secondary: var(--royal-blue);
   --accent: var(--accent-pink);
-  --background: linear-gradient(135deg, #f5f0ff 0%, #e8e0f5 50%, #f0e8ff 100%);
+  --background: #FFF8E7;
   --card-bg: rgba(255, 255, 255, 0.85);
   --text: #1a1539;
   --text-light: #4a4563;
@@ -25,8 +25,8 @@
   --transition: all 0.3s ease;
   
   /* Fonts */
-  --heading-font: 'Poppins', sans-serif;
-  --body-font: 'Playfair Display', serif;
+  --heading-font: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
+  --body-font: 'Roboto Mono', 'Courier New', monospace;
 }
 
 /* Movies & TV page */
