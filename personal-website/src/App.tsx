@@ -320,9 +320,11 @@ const CareerGoals = () => (
             <span className="timeline-label">In 5 years</span>
           </div>
           <div className="timeline-body">
-            <p>
-              Being a part of robotics research that has moved the needle on improving surgery while making it significantly more accessible to people in rural areas. Working on the software and electrical systems of robots to further Human Robot Interaction research while continuing to critically analyze the impact of the technology I'm creating/contributing to and evaluating the ethical concerns of robotics.
-            </p>
+            <ul>
+              <li>Contributing to robotics research that has moved the needle on increasing the standard of care in surgery while increasing access in rural areas.</li>
+              <li>Applying and helping further Human Robot Interaction research by creating humanoids meant to work alongside and to help people in hospital or home settings.</li>
+              <li>Continuing to critically analyze the impact of the technology I'm creating/contributing to and evaluating the ethical concerns of robotics enabling its deployment in the world.</li>
+            </ul>
           </div>
         </div>
       </div>
