@@ -455,10 +455,10 @@ function App() {
           <Link to="/" className="logo"></Link>
           <div className="nav-links">
             <Link to="/robotics">Robotics</Link>
-            <Link to="/interests">Interests Outside of Robotics</Link>
             <Link to="/cv">CV</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/career-goals">Career Goals</Link>
+            <Link to="/interests">Interests Outside of Robotics</Link>
           </div>
         </div>
       </nav>
