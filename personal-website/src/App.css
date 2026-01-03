@@ -455,6 +455,7 @@ h1 {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  background: transparent;
 }
 
 /* CV page */
