@@ -31,11 +31,30 @@ jobs:
           cache: 'npm'
           cache-dependency-path: personal-website/package-lock.json
 
-      - name: Install
-        run: npm ci
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: personal-website/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('personal-website/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install --prefer-offline --no-audit --no-fund
+
+      - name: Cache build output
+        uses: actions/cache@v4
+        id: build-cache
+        with:
+          path: personal-website/dist
+          key: ${{ runner.os }}-build-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-
 
       - name: Build
         run: npm run build
+        env:
+          NODE_ENV: production
 
       - name: Upload artifact (dist)
         uses: actions/upload-pages-artifact@v3

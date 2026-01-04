@@ -6,4 +6,15 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/nandika-kohli/',
+  build: {
+    minify: 'esbuild', // Faster than terser
+    cssMinify: true,
+    sourcemap: false, // Disable sourcemaps for faster builds
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // Disable code splitting for faster builds
+      },
+    },
+  },
 });
