@@ -3,19 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <title>Redirecting…</title>
-    <meta http-equiv="refresh" content="0; url=/nandika-kohli/" />
     <meta name="robots" content="noindex" />
     <script>
-      // If JS runs, preserve the path after the repo name by rebuilding a hash URL
+      // GitHub Pages 404.html fallback for SvelteKit SPA routing
       (function() {
-        var path = window.location.pathname || '/nandika-kohli/';
+        var path = window.location.pathname;
         var base = '/nandika-kohli';
+        
+        // If path doesn't start with base, redirect to base
         if (!path.startsWith(base)) {
-          window.location.replace('/nandika-kohli/');
+          window.location.replace(base + '/');
           return;
         }
-        var rest = path.slice(base.length);
-        var target = base + '/#' + rest.replace(/^\//, '') + window.location.search + window.location.hash;
+        
+        // Remove base from path
+        var rest = path.slice(base.length) || '/';
+        
+        // Redirect to index.html which will handle the routing
+        var target = base + '/index.html';
         window.location.replace(target);
       })();
     </script>
