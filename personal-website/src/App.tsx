@@ -132,23 +132,6 @@ const Projects = () => (
     <h1>Personal Projects</h1>
     <div className="timeline">
       <section className="year-group">
-        <h2>Research</h2>
-        <div className="project-card">
-          <div className="project-media">
-            <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
-            <img
-              src="WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
-              alt="Primary care demo setup"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
-            />
-          </div>
-          <div className="project-body">
-            <h3>Primary Care — Research Poster</h3>
-          </div>
-        </div>
-      </section>
-
-      <section className="year-group">
         <h2>Lectures that I've been to this past semester</h2>
         <div className="project-card no-media">
           <div className="project-body">
@@ -158,9 +141,9 @@ const Projects = () => (
       </section>
 
       <section className="year-group">
+        <h2>SIMR Bioengineering Institute (2023–2024 Summer)</h2>
         <div className="project-card no-media">
           <div className="project-body">
-            <h3>SIMR Bioengineering Institute (2023–2024 Summer)</h3>
             <ul>
               <li>Built a heat sensor with Arduino in a microcontrollers workshop.</li>
               <li>Wrote an abstract on combining insulin and GLP-1 RA delivery; filed a provisional IP patent.</li>
