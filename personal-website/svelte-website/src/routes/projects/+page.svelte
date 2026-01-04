@@ -8,7 +8,6 @@
 </script>
 
 <div class="page projects-page">
-	<h1>Personal Projects</h1>
 	<div class="timeline">
 		<section class="year-group">
 			<h2>SIMR Bioengineering Institute (2023–2024 Summer)</h2>
