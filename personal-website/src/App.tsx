@@ -657,6 +657,7 @@ function App() {
             <Link to="/projects">Projects</Link>
             <Link to="/career-goals">Career Goals</Link>
             <Link to="/interests">Interests Outside of Robotics</Link>
+            <Link to="/citations">Citations and Credit</Link>
           </div>
         </div>
       </nav>
@@ -669,6 +670,7 @@ function App() {
           <Route path="/cv" element={<CV />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/career-goals" element={<CareerGoals />} />
+          <Route path="/citations" element={<CitationsAndCredit />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
