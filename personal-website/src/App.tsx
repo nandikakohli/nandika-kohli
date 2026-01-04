@@ -132,6 +132,19 @@ const Projects = () => (
     <h1>Personal Projects</h1>
     <div className="timeline">
       <section className="year-group">
+        <div className="project-card no-media">
+          <div className="project-body">
+            <h3>SIMR Bioengineering Institute (2023–2024 Summer)</h3>
+            <ul>
+              <li>Built a heat sensor with Arduino in a microcontrollers workshop.</li>
+              <li>Wrote an abstract on combining insulin and GLP-1 RA delivery; filed a provisional IP patent.</li>
+              <li>Deepened interest in medicine via guest lectures and emerging research.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
         <h2>Research</h2>
         <div className="project-card">
           <div className="project-media">
@@ -152,20 +165,6 @@ const Projects = () => (
               <li>
                 <a href="Primary%20Care%20-%20Poster.pdf" download>Download PDF</a>
               </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="year-group">
-        <h2>2023–2024 Summer</h2>
-        <div className="project-card no-media">
-          <div className="project-body">
-            <h3>SIMR Bioengineering Institute</h3>
-            <ul>
-              <li>Built a heat sensor with Arduino in a microcontrollers workshop.</li>
-              <li>Wrote an abstract on combining insulin and GLP-1 RA delivery; filed a provisional IP patent.</li>
-              <li>Deepened interest in medicine via guest lectures and emerging research.</li>
             </ul>
           </div>
         </div>
