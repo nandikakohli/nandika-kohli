@@ -349,9 +349,9 @@ const CareerGoals = () => (
 
 const CitationsAndCredit = () => (
   <div className="page">
-    <h1>Credits and Acknowledgments</h1>
+    <h1>Credits, Thanks, and Acknowledgments</h1>
     <div className="citations-content">
-      <p>This page is for credits and acknowledgments.</p>
+      <p>This page is for credits, thanks, and acknowledgments.</p>
     </div>
   </div>
 );
@@ -665,7 +665,7 @@ function App() {
             <Link to="/projects">Projects</Link>
             <Link to="/career-goals">Career Goals</Link>
             <Link to="/interests">Interests Outside of Robotics</Link>
-            <Link to="/citations">Credits and Acknowledgments</Link>
+            <Link to="/citations">Credits, Thanks, and Acknowledgments</Link>
           </div>
         </div>
       </nav>
