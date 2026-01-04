@@ -348,6 +348,15 @@ const CareerGoals = () => (
   </div>
 );
 
+const CitationsAndCredit = () => (
+  <div className="page">
+    <h1>Citations and Credit</h1>
+    <div className="citations-content">
+      <p>This page is for citations and credits.</p>
+    </div>
+  </div>
+);
+
 /* ============================================================================
    BACKUP CODE - COMMENTED OUT FOR EASY RESTORATION
    To restore a page, uncomment its component below and replace the active 
@@ -679,3 +688,4 @@ function App() {
 }
 
 export default App;
+
