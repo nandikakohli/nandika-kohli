@@ -144,15 +144,6 @@ const Projects = () => (
           </div>
           <div className="project-body">
             <h3>Primary Care — Research Poster</h3>
-            <ul>
-              <li>View in-page preview on the left.</li>
-              <li>
-                <a href="Primary%20Care%20-%20Poster.pdf" target="_blank" rel="noreferrer">Open full poster in new tab</a>
-              </li>
-              <li>
-                <a href="Primary%20Care%20-%20Poster.pdf" download>Download PDF</a>
-              </li>
-            </ul>
           </div>
         </div>
       </section>
