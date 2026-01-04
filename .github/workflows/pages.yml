@@ -15,11 +15,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: personal-website
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,43 +34,19 @@ jobs:
           cache: 'npm'
           cache-dependency-path: personal-website/package-lock.json
 
-      - name: Cache node_modules
-        uses: actions/cache@v4
-        with:
-          path: personal-website/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('personal-website/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm install --prefer-offline --no-audit --no-fund
-
-      - name: Cache build output
-        uses: actions/cache@v4
-        id: build-cache
-        with:
-          path: personal-website/dist
-          key: ${{ runner.os }}-build-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-build-
-
-      - name: Build
-        run: npm run build
+      - name: Install and Build
+        run: |
+          npm ci --prefer-offline --no-audit --no-fund --silent
+          npm run build
         env:
           NODE_ENV: production
+          CI: false
 
-      - name: Upload artifact (dist)
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: personal-website/dist
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
