@@ -160,9 +160,6 @@ const Projects = () => (
               onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
             />
           </div>
-          <div className="project-body">
-            <h3>Primary Care — Research Poster</h3>
-          </div>
         </div>
       </section>
 
