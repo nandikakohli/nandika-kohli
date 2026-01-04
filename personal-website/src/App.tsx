@@ -133,15 +133,6 @@ const Projects = () => (
     <div className="timeline">
       <section className="year-group">
         <h2>SIMR Bioengineering Institute (2023–2024 Summer)</h2>
-        <div className="project-card no-media">
-          <div className="project-body">
-            <ul>
-              <li>Built a heat sensor with Arduino in a microcontrollers workshop.</li>
-              <li>Wrote an abstract on combining insulin and GLP-1 RA delivery; filed a provisional IP patent.</li>
-              <li>Deepened interest in medicine via guest lectures and emerging research.</li>
-            </ul>
-          </div>
-        </div>
         <div className="project-card simr-poster-fullwidth">
           <div className="project-media">
             <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
