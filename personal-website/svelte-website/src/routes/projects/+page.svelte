@@ -14,11 +14,33 @@
 			<div class="project-card simr-poster-fullwidth">
 				<div class="project-media">
 					<iframe title="Primary Care Poster" src="{base}/Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
+				</div>
+			</div>
+			
+			<!-- Side-by-side display for image and video -->
+			<div class="simr-media-grid">
+				<div class="simr-media-item">
 					<img
 						src="{base}/WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
 						alt="Primary care demo setup"
 						on:error={handleImageError}
 					/>
+				</div>
+				<div class="simr-media-item">
+					<img
+						src="{base}/conversing_w_person_image.jpg"
+						alt="SIMR poster presentation"
+						on:error={handleImageError}
+					/>
+				</div>
+				<div class="simr-media-item">
+					<iframe
+						title="SIMR Video"
+						src="https://drive.google.com/file/d/1ATA71U0gWiLhvPfmSWCdXNcjbt9iUKg8/preview"
+						loading="lazy"
+						allow="autoplay; fullscreen"
+						allowfullscreen
+					></iframe>
 				</div>
 			</div>
 		</section>
@@ -34,6 +56,7 @@
 
 		<section class="year-group">
 			<h2>2024–2025</h2>
+			<!-- COMMENTED OUT: FRC Systems Lead
 			<div class="project-card no-media">
 				<div class="project-body">
 					<h3>FRC Systems Lead</h3>
@@ -46,6 +69,8 @@
 					</ul>
 				</div>
 			</div>
+			-->
+			<!-- COMMENTED OUT: Club President
 			<div class="project-card no-media">
 				<div class="project-body">
 					<h3>Club President</h3>
@@ -61,6 +86,7 @@
 					</ul>
 				</div>
 			</div>
+			-->
 			<div class="project-card no-media">
 				<div class="project-body">
 					<h3>Current/Ongoing Projects</h3>
@@ -94,6 +120,7 @@
 			</div>
 		</section>
 
+		<!-- COMMENTED OUT: 2023–2024 section
 		<section class="year-group">
 			<h2>2023–2024</h2>
 			<div class="project-card no-media">
@@ -108,7 +135,9 @@
 				</div>
 			</div>
 		</section>
+		-->
 
+		<!-- COMMENTED OUT: 2022–2023 section
 		<section class="year-group">
 			<h2>2022–2023</h2>
 			<div class="project-card no-media">
@@ -139,7 +168,9 @@
 				</div>
 			</div>
 		</section>
+		-->
 
+		<!-- COMMENTED OUT: 2021–2022 section
 		<section class="year-group">
 			<h2>2021–2022</h2>
 			<div class="project-card no-media">
@@ -155,6 +186,7 @@
 				</div>
 			</div>
 		</section>
+		-->
 	</div>
 </div>
 
