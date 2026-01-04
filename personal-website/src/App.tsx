@@ -194,13 +194,11 @@ const Projects = () => (
         </div>
         <div className="project-card no-media">
           <div className="project-body">
-            <h3>Discovery Project</h3>
+            <h3>Current/Ongoing Projects</h3>
             <ul>
-              <li><strong>Discovery Project Idea —</strong> I wanted to create a robot (ideally based off Baymax) that is capable of moving its wheels using an Arduino. I wanted to be able to do this so I am able to learn how to use the Jazzy robot operating system (ROS) which is an ECE skill.</li>
-              <li><strong>Project Progress —</strong> I was able to get 2 motors running and then was able to press the button in order to get the motors to run in different directions. I was also able to get it working with the L248N driver board and with the arduino. I was able to begin learning how to use ROS with a simple project but still need to learn how to create more complicated projects using ROS.</li>
-              <li><strong>Project Successes and Failures —</strong> I ran into many roadblocks including being unable to understand how to get the arduino and the raspberry pi to connect to each other which caused many issues. I also wanted to learn how to be able to design a PCB</li>
-              <li><strong>ECE Skills Gained —</strong> I earned how to use and arduino, was able to learn how to code in C++, was able to begin learning PCB design, and was able to learn how to integrate these components together</li>
-              <li><strong>Final thoughts —</strong> This has confirmed my interest in being a Computer Engineering major and in Robotics. However, I have realized that I need to work on my time management in order to be able to complete the project and achieve the results I want in college.</li>
+              <li>Recreating a Mini Baymax to accompany me on my desk</li>
+              <li><strong>Current progress:</strong> motors running successfully in different directions using an L248N driver board with arduino. Running a simple ROS project to be deployed on hardware.</li>
+              <li><strong>Status:</strong> currently taking a course in ROS2 Jazzy to write software for the robot and creating a pcb for the robot controller.</li>
             </ul>
           </div>
         </div>
