@@ -1,31 +1,24 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Redirecting…</title>
-    <meta name="robots" content="noindex" />
-    <script>
-      // GitHub Pages 404.html fallback for SvelteKit SPA routing
-      (function() {
-        var path = window.location.pathname;
-        var base = '/nandika-kohli';
-        
-        // If path doesn't start with base, redirect to base
-        if (!path.startsWith(base)) {
-          window.location.replace(base + '/');
-          return;
-        }
-        
-        // Remove base from path
-        var rest = path.slice(base.length) || '/';
-        
-        // Redirect to index.html which will handle the routing
-        var target = base + '/index.html';
-        window.location.replace(target);
-      })();
-    </script>
-  </head>
-  <body>
-    <p>Redirecting…</p>
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="/nandika-kohli/baymax-cute-cartoon-robot-with-friendly-design-TwJbeC1k.jpg" />
+		<script>
+			// GitHub Pages 404.html fallback for SvelteKit SPA routing
+			// Simply redirect to index.html - SvelteKit will handle the routing
+			(function() {
+				var path = window.location.pathname;
+				var base = '/nandika-kohli';
+				var search = window.location.search;
+				var hash = window.location.hash;
+				
+				// Redirect to index.html - SvelteKit's client-side router will handle the path
+				window.location.replace(base + '/index.html' + search + hash);
+			})();
+		</script>
+	</head>
+	<body>
+		<p>Redirecting…</p>
+	</body>
 </html>
