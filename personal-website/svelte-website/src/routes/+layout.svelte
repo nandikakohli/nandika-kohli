@@ -11,7 +11,7 @@
 				<path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>
 		</a>
-		<a href="/" class="logo"></a>
+		<a href="/" class="logo" aria-label="Home"></a>
 		<div class="nav-links">
 			<a href="/robotics">Robotics</a>
 			<a href="/cv">CV</a>

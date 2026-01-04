@@ -1,7 +1,9 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+	
 	function handleImageError(e: Event) {
 		const target = e.target as HTMLImageElement;
-		target.src = '/vite.svg';
+		target.src = `${base}/vite.svg`;
 	}
 </script>
 
@@ -12,9 +14,9 @@
 			<h2>SIMR Bioengineering Institute (2023–2024 Summer)</h2>
 			<div class="project-card simr-poster-fullwidth">
 				<div class="project-media">
-					<iframe title="Primary Care Poster" src="/Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
+					<iframe title="Primary Care Poster" src="{base}/Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
 					<img
-						src="/WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
+						src="{base}/WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg"
 						alt="Primary care demo setup"
 						on:error={handleImageError}
 					/>

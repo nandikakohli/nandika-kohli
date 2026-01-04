@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import { base } from '$app/paths';
 	
 	function handleImageError(e: Event) {
 		const target = e.target as HTMLImageElement;
-		target.src = '/profile-backup.jpg';
+		target.src = `${base}/profile-backup.jpg`;
 	}
 </script>
 
@@ -20,7 +21,7 @@
 		</div>
 		<div class="photo-container">
 			<img
-				src="/profile-new.jpeg"
+				src="{base}/profile-new.jpeg"
 				alt="Profile"
 				class="profile-photo"
 				on:error={handleImageError}
