@@ -38,6 +38,10 @@ jobs:
         working-directory: personal-website/svelte-website
         run: npm ci --prefer-offline --no-audit --no-fund --silent
 
+      - name: Sync SvelteKit
+        working-directory: personal-website/svelte-website
+        run: npm run prepare
+
       - name: Build
         working-directory: personal-website/svelte-website
         run: npm run build

@@ -14,7 +14,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: '/nandika-kohli/'
+			base: '/nandika-kohli'
 		}
 	}
 };
