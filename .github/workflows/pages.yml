@@ -34,17 +34,21 @@ jobs:
           cache: 'npm'
           cache-dependency-path: personal-website/svelte-website/package-lock.json
 
+      - name: Cache SvelteKit
+        uses: actions/cache@v4
+        with:
+          path: personal-website/svelte-website/.svelte-kit
+          key: svelte-kit-${{ runner.os }}-${{ hashFiles('personal-website/svelte-website/svelte.config.js') }}
+          restore-keys: |
+            svelte-kit-${{ runner.os }}-
+
       - name: Install dependencies
         working-directory: personal-website/svelte-website
         run: npm ci --prefer-offline --no-audit --no-fund --silent
 
-      - name: Sync SvelteKit
-        working-directory: personal-website/svelte-website
-        run: npm run prepare
-
       - name: Build
         working-directory: personal-website/svelte-website
-        run: npm run build
+        run: npm run prepare && npm run build
         env:
           NODE_ENV: production
           CI: false
