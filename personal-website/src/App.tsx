@@ -151,7 +151,7 @@ const Projects = () => (
             </ul>
           </div>
         </div>
-        <div className="project-card">
+        <div className="project-card simr-poster-fullwidth">
           <div className="project-media">
             <iframe title="Primary Care Poster" src="Primary%20Care%20-%20Poster.pdf#view=FitH&toolbar=0" loading="lazy"></iframe>
             <img
