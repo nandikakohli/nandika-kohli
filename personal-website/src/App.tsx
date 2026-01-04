@@ -132,15 +132,6 @@ const Projects = () => (
     <h1>Personal Projects</h1>
     <div className="timeline">
       <section className="year-group">
-        <h2>Lectures that I've been to this past semester</h2>
-        <div className="project-card no-media">
-          <div className="project-body">
-            <p>This section is for lectures attended this past semester.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="year-group">
         <h2>SIMR Bioengineering Institute (2023–2024 Summer)</h2>
         <div className="project-card no-media">
           <div className="project-body">
@@ -159,6 +150,15 @@ const Projects = () => (
               alt="Primary care demo setup"
               onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'vite.svg'; }}
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="year-group">
+        <h2>Lectures that I've been to this past semester</h2>
+        <div className="project-card no-media">
+          <div className="project-body">
+            <p>This section is for lectures attended this past semester.</p>
           </div>
         </div>
       </section>
