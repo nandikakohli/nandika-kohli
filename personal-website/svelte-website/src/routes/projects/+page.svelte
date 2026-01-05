@@ -46,16 +46,73 @@
 		</section>
 
 		<section class="year-group">
-			<h2>Lectures that I've been to this past semester</h2>
-			<div class="project-card no-media">
-				<div class="project-body">
-					<p>This section is for lectures attended this past semester.</p>
+			<h2>FRC & Robots I've helped build</h2>
+			<div class="robots-grid">
+				<div class="robots-grid-header">
+					<div class="robots-grid-cell header">Year</div>
+					<div class="robots-grid-cell header">Team</div>
+					<div class="robots-grid-cell header">Robot</div>
+					<div class="robots-grid-cell header">Role</div>
+				</div>
+				
+				<div class="robots-grid-row">
+					<div class="robots-grid-cell" data-label="Year">2024–2025</div>
+					<div class="robots-grid-cell" data-label="Team">FRC Team 2473</div>
+					<div class="robots-grid-cell" data-label="Robot">
+						<img src="{base}/2025 season robot.png" alt="FRC Team 2473 Robot 2024-2025" on:error={handleImageError} />
+					</div>
+					<div class="robots-grid-cell" data-label="Role">
+						<div class="role-container">
+							<div class="role-list">FRC CV Systems Lead</div>
+							<div class="role-list">Club President</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="robots-grid-row">
+					<div class="robots-grid-cell" data-label="Year">2023–2024</div>
+					<div class="robots-grid-cell" data-label="Team">FRC Team 2473</div>
+					<div class="robots-grid-cell" data-label="Robot">
+						<img src="{base}/2473 2024 bot.png" alt="FRC Team 2473 Robot 2023-2024" on:error={handleImageError} />
+					</div>
+					<div class="robots-grid-cell" data-label="Role">
+						<div class="role-container">
+							<div class="role-list">FRC CV Subteam Member</div>
+							<div class="role-list">Technical Project Lead</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="robots-grid-row">
+					<div class="robots-grid-cell" data-label="Year">2022–2023</div>
+					<div class="robots-grid-cell" data-label="Team">FTC Team 7128</div>
+					<div class="robots-grid-cell" data-label="Robot">
+						<img src="{base}/7128.png" alt="FTC Team 7128 Robot 2022-2023" on:error={handleImageError} />
+					</div>
+					<div class="robots-grid-cell" data-label="Role">
+						<div class="role-container">
+							<div class="role-list">Team Lead</div>
+							<div class="role-list">Outreach Lead</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="robots-grid-row">
+					<div class="robots-grid-cell" data-label="Year">2021–2022</div>
+					<div class="robots-grid-cell" data-label="Team">FTC Team 6038</div>
+					<div class="robots-grid-cell" data-label="Robot">
+						<img src="{base}/6038.png" alt="FTC Team 6038 Robot 2021-2022" on:error={handleImageError} />
+					</div>
+					<div class="robots-grid-cell" data-label="Role">
+						<div class="role-container">
+							<div class="role-list">Hardware Team Member</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="year-group">
-			<h2>2024–2025</h2>
 			<!-- COMMENTED OUT: FRC Systems Lead
 			<div class="project-card no-media">
 				<div class="project-body">
@@ -116,6 +173,15 @@
 							</a>
 						</li>
 					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="year-group">
+			<h2>Lectures that I've been to this past semester</h2>
+			<div class="project-card no-media">
+				<div class="project-body">
+					<p>This section is for lectures attended this past semester.</p>
 				</div>
 			</div>
 		</section>
