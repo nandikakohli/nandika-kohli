@@ -14,7 +14,9 @@
 		</a>
 		<a href="{base}/" class="logo" aria-label="Home"></a>
 		<div class="nav-links">
+			<!-- COMMENTED OUT: Robotics link
 			<a href="{base}/robotics">Robotics</a>
+			-->
 			<a href="{base}/cv">CV</a>
 			<a href="{base}/projects">Projects</a>
 			<a href="{base}/career-goals">Career Goals</a>
