@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-// import FlowersGarden from './components/FlowersGarden';
+import UnfinishedGridBackground from './components/UnfinishedGridBackground';
 import './App.css';
 
 const UNDER_CONSTRUCTION = false;
@@ -15,7 +15,8 @@ const UnderConstruction = () => (
 const Home = () => {
   return (
     <div className="home-container">
-      {/* <FlowersGarden /> */}
+      <UnfinishedGridBackground />
+      <div className="home-body">
       <div className="content">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,10 +26,33 @@ const Home = () => {
         >
           <h1>Hi I'm <span className="highlight">Nandika</span>!</h1>
           <section className="notice-box">
-            <span className="notice-strong">Note:</span> This website is still being edited for style and readability. <span className="notice-em">Stay tuned for updates!</span>
+            <p>
+              I'm an aspiring roboticist excited to create humanoids and surgical robots to improve
+              the standard of care and ensure the human right of being healthy. Currently I'm a
+              computer engineering undergrad at Tech excited to learn while gaining a deeper more
+              nuanced understanding of robotics and medicine.
+            </p>
           </section>
           <section className="blurb">
-            <p>I'm an aspiring roboticist excited to create humanoids and surgical robots to improve medical treatment because I strongly believe that being healthy is a human right. I'm currently a computer engineering undergrad at Georgia Tech who's always looking to learn and gain more well rounded and nuanced perspectives. Here's where my head is at right now: I believe consistent sustained effort is crucial to gaining the technical and interpersonal skills that will enable me to contribute to the robotics solutions I want to see in the world. Respecting everything whether it be the people I find myself lucky enough to call friends and mentors or the butterflies that I'm delighted to see every time I walk through Tech Square is a non-negotiable for me. Currently I approach problems with the aim of building or adopting systems to enable a certain objective. As someone who enjoys discussions I find that I am able to deepen my own understanding by constantly questioning and thinking through the various modalities of a problem. Outside of robotics or reading research I'm an avowed boba and rose green tea addict, I love to watch movies and TV shows (I also love recommendations, keep scrolling to learn more!), I enjoy dancing, I love to hang out with friends, yap and watch sunsets.</p>
+            <p>
+              Here's where my head is at right now: consistent sustained effort is crucial to gaining
+              the technical and interpersonal skills that will enable me to contribute to the robotics
+              solutions I want to see in the world. Respecting everything whether it be the people I
+              find myself lucky enough to call friends and mentors or the butterflies that I'm delighted
+              to see every time I walk through Tech Square is a non-negotiable for me.
+            </p>
+            <p>
+              The perspective I bring to problems is starting by considering end outcomes, the context
+              of the systems that surround the issue, planning to create a solution, and then
+              collaborating to ensure solutions become reality. As someone who enjoys discussions I find
+              that I'm able to deepen my understanding by constantly questioning and thinking through
+              the various modalities of a problem.
+            </p>
+            <p>
+              I'm also an avowed boba and rose green tea addict, love to watch movies and TV shows (I
+              also love recommendations, keep scrolling to learn more!). I enjoy dancing, music (Tecca
+              and Laufey specifically), love to hang out with friends, love beaches and seeing sunsets.
+            </p>
           </section>
         </motion.div>
         <div className="photo-container">
@@ -43,6 +67,10 @@ const Home = () => {
           />
         </div>
       </div>
+      </div>
+      <footer className="last-edited-box" aria-label="Last updated">
+        <p>This webpage was last edited on 5/19/2026.</p>
+      </footer>
     </div>
   );
 };

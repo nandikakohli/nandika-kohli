@@ -1,10 +1,19 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Vite configuration for GitHub Pages project site
 // The base must match the repository name so assets resolve under /<repo>/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@shared': path.resolve(__dirname, 'shared'),
+    },
+  },
   base: '/nandika-kohli/',
   build: {
     minify: 'esbuild', // Fastest minifier

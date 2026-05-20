@@ -165,14 +165,31 @@ p, li, a, button, input, textarea, select {
 }
 
 /* Home Page */
+main {
+  position: relative;
+  z-index: 2;
+}
+
 .home-container {
   min-height: 100dvh;
   display: flex;
-  align-items: center;
-  padding: 6rem 2rem 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 6rem 2rem 1.5rem;
   background: transparent;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.home-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .content {
@@ -215,17 +232,22 @@ h1 {
 
 .notice-box {
   margin: 0 0 1rem 0;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.25rem;
   background: #fff;
   border: 1px solid rgba(104, 93, 206, 0.25);
   border-radius: 10px;
   box-shadow: var(--shadow);
   font-family: var(--heading-font);
   color: var(--deep-blue);
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
-.notice-strong { color: var(--vibrant-purple); font-weight: 600; }
-.notice-em { color: var(--soft-lavender); font-weight: 600; }
+.notice-box p {
+  margin: 0;
+  font-family: var(--heading-font);
+  color: var(--text-light);
+}
 
 .blurb {
   margin: 1rem 0 0;
@@ -245,9 +267,32 @@ h1 {
   max-width: 64rem;
 }
 
-.blurb p { 
+.blurb p {
   margin: 0;
   font-family: var(--heading-font);
+}
+
+.last-edited-box {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  margin: 1.5rem auto 0;
+  padding: 0.65rem 1.1rem;
+  max-width: 28rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(104, 93, 206, 0.22);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+.last-edited-box p {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-light);
 }
 
 .photo-container {

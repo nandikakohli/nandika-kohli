@@ -6,6 +6,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		alias: {
+			'@shared': '../shared',
+		},
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
