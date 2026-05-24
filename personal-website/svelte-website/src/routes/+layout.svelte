@@ -20,7 +20,9 @@
 			<a href="{base}/cv">CV</a>
 			<a href="{base}/projects">Projects</a>
 			<a href="{base}/career-goals">Career Goals</a>
+			<!-- COMMENTED OUT: Interests Outside of Robotics link
 			<a href="{base}/interests">Interests Outside of Robotics</a>
+			-->
 			<a href="{base}/citations">Credits, Thanks, and Acknowledgments</a>
 		</div>
 	</div>
