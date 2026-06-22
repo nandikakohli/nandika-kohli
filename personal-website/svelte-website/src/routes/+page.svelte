@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { base } from '$app/paths';
-	import UnfinishedGridBackground from '$lib/components/UnfinishedGridBackground.svelte';
 	
 	function handleImageError(e: Event) {
 		const target = e.target as HTMLImageElement;
@@ -10,11 +9,10 @@
 </script>
 
 <div class="home-container">
-	<UnfinishedGridBackground />
 	<div class="home-body">
 		<div class="content">
 		<div class="text-content" transition:fade={{ duration: 800, delay: 0 }}>
-			<h1>Hi I'm <span class="highlight">Nandika</span>!</h1>
+			<h1 class="home-title">Hi I'm <span class="highlight">Nandika</span>!</h1>
 			<section class="notice-box">
 				<p>
 					I'm an aspiring roboticist excited to create humanoids and surgical robots to improve
@@ -55,7 +53,4 @@
 		</div>
 	</div>
 	</div>
-	<footer class="last-edited-box" aria-label="Last updated">
-		<p>This webpage was last edited on 5/19/2026.</p>
-	</footer>
 </div>

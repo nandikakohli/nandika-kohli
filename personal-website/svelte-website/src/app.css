@@ -36,13 +36,13 @@
 }
 
 html {
-  background: var(--background);
+  background: #fafaf5;
   min-height: 100%;
 }
 
 body {
   font-family: var(--body-font);
-  background: var(--background);
+  background: #fafaf5;
   color: var(--text);
   line-height: 1.8;
   min-height: 100vh;
@@ -221,6 +221,37 @@ h1 {
   display: inline-block;
 }
 
+.home-title {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 3.85rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--deep-blue);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(104, 93, 206, 0.35);
+  border-radius: 14px;
+  box-shadow:
+    0 10px 30px rgba(104, 93, 206, 0.22),
+    0 2px 8px rgba(25, 49, 171, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-text-fill-color: var(--deep-blue);
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+}
+
+.home-title .highlight {
+  color: var(--vibrant-purple);
+  -webkit-text-fill-color: var(--vibrant-purple);
+  font-weight: 800;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
 .highlight {
   background: linear-gradient(90deg, var(--soft-lavender), var(--light-purple), var(--accent-pink));
   -webkit-background-clip: text;
@@ -275,8 +306,7 @@ h1 {
 .last-edited-box {
   position: relative;
   z-index: 2;
-  align-self: center;
-  margin: 1.5rem auto 0;
+  margin: 2rem auto 2.5rem;
   padding: 0.65rem 1.1rem;
   max-width: 28rem;
   text-align: center;
@@ -884,6 +914,11 @@ h1 {
   
   h1 {
     font-size: 2.8rem;
+  }
+
+  .home-title {
+    font-size: 2.6rem;
+    padding: 0.7rem 1.1rem;
   }
   
   .project-card {

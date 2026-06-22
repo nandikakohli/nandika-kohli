@@ -2,7 +2,10 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
+	import HomeBackground from '$lib/components/HomeBackground.svelte';
 </script>
+
+<HomeBackground />
 
 <nav class="navbar">
 	<div class="nav-content">
@@ -31,3 +34,7 @@
 <main>
 	<slot />
 </main>
+
+<footer class="last-edited-box" aria-label="Last updated">
+	<p>Website updated 2026.</p>
+</footer>
