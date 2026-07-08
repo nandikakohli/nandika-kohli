@@ -13,14 +13,6 @@
 		<div class="content">
 		<div class="text-content" transition:fade={{ duration: 800, delay: 0 }}>
 			<h1 class="home-title">Hi I'm <span class="highlight">Nandika</span>!</h1>
-			<section class="notice-box">
-				<p>
-					I'm an aspiring roboticist excited to create humanoids and surgical robots to improve
-					the standard of care and ensure the human right of being healthy. Currently I'm a
-					computer engineering undergrad at Tech excited to learn while gaining a deeper more
-					nuanced understanding of robotics and medicine.
-				</p>
-			</section>
 			<section class="blurb">
 				<p>
 					Here's where my head is at right now: consistent sustained effort is crucial to gaining

@@ -229,9 +229,9 @@ h1 {
 
 .home-title {
   display: inline-block;
-  margin-bottom: 1.5rem;
-  padding: 0.85rem 1.6rem;
-  font-size: 3.85rem;
+  margin-bottom: 0.75rem;
+  padding: 0.425rem 0.8rem;
+  font-size: 1.925rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -265,25 +265,6 @@ h1 {
   background-clip: text;
   color: transparent;
   font-weight: 700;
-}
-
-.notice-box {
-  margin: 0 0 1rem 0;
-  padding: 1rem 1.25rem;
-  background: #fff;
-  border: 1px solid rgba(104, 93, 206, 0.25);
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  font-family: var(--heading-font);
-  color: var(--deep-blue);
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-.notice-box p {
-  margin: 0;
-  font-family: var(--heading-font);
-  color: var(--text-light);
 }
 
 .blurb {
@@ -923,8 +904,8 @@ h1 {
   }
 
   .home-title {
-    font-size: 2.6rem;
-    padding: 0.7rem 1.1rem;
+    font-size: 1.3rem;
+    padding: 0.35rem 0.55rem;
   }
   
   .project-card {
