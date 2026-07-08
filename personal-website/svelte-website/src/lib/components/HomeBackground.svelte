@@ -6,10 +6,10 @@
 	<div class="home-bg-container">
 		<img
 			class="home-bg-image"
-			src="{base}/website-background.png"
+			src="{base}/updated%20background.jpeg"
 			alt=""
-			width="3368"
-			height="2605"
+			width="1600"
+			height="1237"
 			decoding="async"
 			fetchpriority="low"
 		/>
@@ -44,7 +44,7 @@
 		min-width: 100%;
 		min-height: 100%;
 		object-fit: cover;
-		object-position: center center;
+		object-position: center 60%;
 		opacity: 1;
 		border: none;
 		border-radius: 0;

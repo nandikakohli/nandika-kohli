@@ -7,6 +7,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
 	plugins: [sveltekit()],
+	server: {
+		fs: {
+			allow: [__dirname, path.resolve(__dirname, '../node_modules')],
+		},
+	},
 	resolve: {
 		alias: {
 			'@shared': path.resolve(__dirname, '../shared'),
