@@ -44,7 +44,7 @@
 		min-width: 100%;
 		min-height: 100%;
 		object-fit: cover;
-		object-position: center 30%;
+		object-position: center 0%;
 		opacity: 1;
 		border: none;
 		border-radius: 0;
