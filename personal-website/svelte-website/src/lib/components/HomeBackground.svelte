@@ -6,10 +6,10 @@
 	<div class="home-bg-container">
 		<img
 			class="home-bg-image"
-			src="{base}/updated%20background.jpeg"
+			src="{base}/website-background.png"
 			alt=""
-			width="1600"
-			height="1237"
+			width="3368"
+			height="2605"
 			decoding="async"
 			fetchpriority="low"
 		/>
