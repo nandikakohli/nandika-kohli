@@ -4,10 +4,10 @@ export default function UnfinishedGridBackground() {
 			<div className="grid-bg-container">
 				<img
 					className="grid-bg"
-					src={`${import.meta.env.BASE_URL}updated%20background.jpeg`}
+					src={`${import.meta.env.BASE_URL}website-background-hires.png`}
 					alt=""
-					width="1600"
-					height="1237"
+					width="3534"
+					height="2736"
 					decoding="async"
 				/>
 			</div>

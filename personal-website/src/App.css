@@ -178,9 +178,9 @@ html {
 body {
   font-family: var(--body-font);
   background-color: var(--background);
-  background-image: url('/nandika-kohli/updated%20background.jpeg');
+  background-image: url('/nandika-kohli/website-background-hires.png');
   background-size: cover;
-  background-position: center 45%;
+  background-position: center 0%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--text);
