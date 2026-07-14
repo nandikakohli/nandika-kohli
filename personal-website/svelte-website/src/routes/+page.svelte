@@ -21,27 +21,6 @@
 					usability, and real world needs.
 				</p>
 			</section>
-			<section class="blurb">
-				<p>
-					Here's where my head is at right now: consistent sustained effort is crucial to gaining
-					the technical and interpersonal skills that will enable me to contribute to the robotics
-					solutions I want to see in the world. Respecting everything whether it be the people I
-					find myself lucky enough to call friends and mentors or the butterflies that I'm delighted
-					to see every time I walk through Tech Square is a non-negotiable for me.
-				</p>
-				<p>
-					The perspective I bring to problems is starting by considering end outcomes, the context
-					of the systems that surround the issue, planning to create a solution, and then
-					collaborating to ensure solutions become reality. As someone who enjoys discussions I find
-					that I'm able to deepen my understanding by constantly questioning and thinking through
-					the various modalities of a problem.
-				</p>
-				<p>
-					I'm also an avowed boba and rose green tea addict, love to watch movies and TV shows (I
-					also love recommendations, keep scrolling to learn more!). I enjoy dancing, music (Tecca
-					and Laufey specifically), love to hang out with friends, love beaches and seeing sunsets.
-				</p>
-			</section>
 		</div>
 		<div class="photo-container">
 			<img
