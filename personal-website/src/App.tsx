@@ -29,8 +29,8 @@ const Home = () => {
             <p>
               I’m a Computer Engineering undergrad at Tech interested in developing humanoid and
               surgical robots that improve the standard of care. I enjoy collaborating with
-              multidisciplinary teams to design robotics systems that design, safety and real world
-              needs.
+              multidisciplinary teams to design robotics systems that balance functionality,
+              safety and real world needs.
             </p>
           </section>
           <section className="blurb">
@@ -697,4 +697,3 @@ function App() {
 }
 
 export default App;
-
