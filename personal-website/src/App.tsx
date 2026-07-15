@@ -27,10 +27,10 @@ const Home = () => {
           <h1>Hi I'm <span className="highlight">Nandika</span>!</h1>
           <section className="notice-box">
             <p>
-              I'm an aspiring roboticist excited to create humanoids and surgical robots to improve
-              the standard of care and ensure the human right of being healthy. Currently I'm a
-              computer engineering undergrad at Tech excited to learn while gaining a deeper more
-              nuanced understanding of robotics and medicine.
+              I’m a Computer Engineering undergrad at Tech interested in developing humanoid and
+              surgical robots that improve the standard of care. I enjoy collaborating with
+              multidisciplinary teams to design robotics systems that design, safety and real world
+              needs.
             </p>
           </section>
           <section className="blurb">
