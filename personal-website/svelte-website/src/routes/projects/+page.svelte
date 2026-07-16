@@ -156,15 +156,6 @@
 			</div>
 		</section>
 
-		<section class="year-group">
-			<h2>Lectures that I've been to this past semester</h2>
-			<div class="project-card no-media">
-				<div class="project-body">
-					<p>This section is for lectures attended this past semester.</p>
-				</div>
-			</div>
-		</section>
-
 		<!-- COMMENTED OUT: 2023–2024 section
 		<section class="year-group">
 			<h2>2023–2024</h2>
@@ -234,4 +225,3 @@
 		-->
 	</div>
 </div>
-

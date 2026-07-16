@@ -174,15 +174,6 @@ const Projects = () => (
       </section>
 
       <section className="year-group">
-        <h2>Lectures that I've been to this past semester</h2>
-        <div className="project-card no-media">
-          <div className="project-body">
-            <p>This section is for lectures attended this past semester.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="year-group">
         <h2>2024–2025</h2>
         <div className="project-card no-media">
           <div className="project-body">
