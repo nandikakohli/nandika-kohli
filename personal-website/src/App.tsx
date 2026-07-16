@@ -221,27 +221,6 @@ const Projects = () => (
             </ul>
           </div>
         </div>
-        <div className="project-card">
-          <div className="project-media">
-            <iframe
-              title="Project Demo Video"
-              src="https://drive.google.com/file/d/1JsCp0ueAmrl4o8AKtZpQTNvjouUOIKE2/preview"
-              loading="lazy"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <div className="project-body">
-            <h3>Discovery Project – Demo Video</h3>
-            <ul>
-              <li>
-                <a href="https://drive.google.com/file/d/1JsCp0ueAmrl4o8AKtZpQTNvjouUOIKE2/view?usp=sharing" target="_blank" rel="noreferrer">
-                  Open video in a new tab
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </section>
 
       <section className="year-group">
