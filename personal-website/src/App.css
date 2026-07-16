@@ -457,11 +457,13 @@ h1 {
   line-height: 1.8;
   backdrop-filter: blur(6px);
   max-width: 64rem;
+  text-align: left;
 }
 
 .blurb p { 
   margin: 0;
   font-family: var(--heading-font);
+  text-align: left;
 }
 
 .last-edited-box {
