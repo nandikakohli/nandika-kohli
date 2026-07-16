@@ -27,7 +27,7 @@ const Home = () => {
           <h1>Hi I'm <span className="highlight">Nandika</span>!</h1>
           <section className="notice-box">
             <p>
-              I’m a Computer Engineering undergrad at Tech interested in developing humanoid and
+              I’m a Computer Engineering undergrad at Tech focused on developing humanoid and
               surgical robots that improve the standard of care. I enjoy collaborating with
               multidisciplinary teams to design robotics systems that balance functionality,
               safety and real world needs.
@@ -35,23 +35,32 @@ const Home = () => {
           </section>
           <section className="blurb">
             <p>
-              Here's where my head is at right now: consistent sustained effort is crucial to gaining
-              the technical and interpersonal skills that will enable me to contribute to the robotics
-              solutions I want to see in the world. Respecting everything whether it be the people I
-              find myself lucky enough to call friends and mentors or the butterflies that I'm delighted
-              to see every time I walk through Tech Square is a non-negotiable for me.
+              I believe meaningful progress in robotics comes from sustained effort, genuine curiosity,
+              and optimism about the positive impact of robots. Respecting everything whether it be the
+              people I have the opportunity to work with, the communities robots will impact or the
+              butterflies that make me smile across campus is of utmost importance to me.
             </p>
             <p>
-              The perspective I bring to problems is starting by considering end outcomes, the context
-              of the systems that surround the issue, planning to create a solution, and then
-              collaborating to ensure solutions become reality. As someone who enjoys discussions I find
-              that I'm able to deepen my understanding by constantly questioning and thinking through
-              the various modalities of a problem.
+              I enjoy discussions that tackle difficult questions about the implications of technology
+              or robotics and give me the opportunity to deeply reflect on such issues.
             </p>
             <p>
-              I'm also an avowed boba and rose green tea addict, love to watch movies and TV shows (I
-              also love recommendations, keep scrolling to learn more!). I enjoy dancing, music (Tecca
-              and Laufey specifically), love to hang out with friends, love beaches and seeing sunsets.
+              Through leading large project teams, I’ve discovered how rewarding it is to build
+              cultures centered on open discussion, mentorship, accountability, bold experimentation,
+              and fun! I’m excited to bring this mindset to robotics safety and systems integration,
+              connecting intelligent software, mechatronics systems, and people centered design to
+              translate ambitious research into dependable technology that can be responsibly deployed
+              in the real world.
+            </p>
+            <p>
+              I approach problems from the top down: I define the desired outcomes and criteria for
+              success clearly, identify the system level requirements, and communicate the timeline and
+              tasks needed to bring solutions to reality.
+            </p>
+            <p>
+              Outside of exploring robotics, I can be found drinking boba or rose green tea, collecting
+              movie and TV recommendations, dancing, watching sunsets, or joking around and yapping
+              with friends :)
             </p>
           </section>
         </motion.div>
@@ -86,7 +95,7 @@ const Robotics = () => (
 const InterestsOutsideRobotics = () => (
   <div className="page interests-page">
     <h1>Interests Outside of Robotics</h1>
-    
+
     <section className="interests-section">
       <h2>Dancing & Music</h2>
       <p>This section is temporarily unavailable and under construction. Please check back later.</p>
@@ -284,7 +293,7 @@ const CareerGoals = () => (
     <h1>Career Goals</h1>
     <div className="career-timeline">
       <div className="timeline-line"></div>
-      
+
       <div className="timeline-item">
         <div className="timeline-node">
           <div className="node-pulse"></div>
@@ -338,7 +347,7 @@ const CitationsAndCredit = () => (
 
 /* ============================================================================
    BACKUP CODE - COMMENTED OUT FOR EASY RESTORATION
-   To restore a page, uncomment its component below and replace the active 
+   To restore a page, uncomment its component below and replace the active
    component above with the restored version.
    ============================================================================ */
 
@@ -649,7 +658,7 @@ function App() {
           </div>
         </div>
       </nav>
-      
+
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

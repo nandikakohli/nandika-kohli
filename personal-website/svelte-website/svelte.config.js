@@ -1,6 +1,9 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
+const isProduction = process.env.NODE_ENV === 'production';
+const basePath = isProduction ? '/nandika-kohli' : '';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
@@ -17,7 +20,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: '/nandika-kohli'
+			base: basePath
 		}
 	}
 };

@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run dev --prefix svelte-website",
+    "dev": "npm --prefix svelte-website run dev --",
     "dev:react": "vite",
-    "dev:svelte": "npm run dev --prefix svelte-website",
-    "build": "npm run build --prefix svelte-website",
+    "dev:svelte": "npm --prefix svelte-website run dev --",
+    "build": "npm --prefix svelte-website run build",
     "build:react": "vite build",
     "build:check": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "npm run preview --prefix svelte-website",
+    "preview": "npm --prefix svelte-website run preview --",
     "preview:react": "vite preview"
   },
   "dependencies": {

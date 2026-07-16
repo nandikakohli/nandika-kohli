@@ -10,7 +10,7 @@
   --muted-purple: #4F4D9D;
   --accent-pink: #E2A9DB;
   --warm-peach: #FFC198;
-  
+
   /* Theme Variables */
   --primary: var(--vibrant-purple);
   --primary-dark: var(--muted-purple);
@@ -23,7 +23,7 @@
   --white: #ffffff;
   --shadow: 0 4px 20px rgba(104, 93, 206, 0.15);
   --transition: all 0.3s ease;
-  
+
   /* Fonts */
   --heading-font: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
   --body-font: 'Roboto Mono', 'Courier New', monospace;
@@ -393,21 +393,13 @@ h1 {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  background: linear-gradient(90deg, var(--royal-blue), var(--vibrant-purple), var(--soft-lavender));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: var(--deep-blue);
   position: relative;
   display: inline-block;
 }
 
 .highlight {
-  background: linear-gradient(90deg, var(--soft-lavender), var(--light-purple), var(--accent-pink));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: var(--vibrant-purple);
   font-weight: 700;
 }
 
@@ -427,7 +419,7 @@ h1 {
   background: #fff;
   border: 1px solid rgba(104, 93, 206, 0.25);
   border-radius: 10px;
-  box-shadow: var(--shadow);
+  box-shadow: none;
   font-family: var(--heading-font);
   color: var(--deep-blue);
   font-size: 1.05rem;
@@ -446,7 +438,7 @@ h1 {
   padding: 1.25rem 1.5rem;
   background: var(--card-bg);
   border-radius: 12px;
-  box-shadow: var(--shadow);
+  box-shadow: none;
   border: 1px solid rgba(104, 93, 206, 0.2);
   display: flex;
   flex-direction: column;
@@ -460,7 +452,7 @@ h1 {
   text-align: left;
 }
 
-.blurb p { 
+.blurb p {
   margin: 0;
   font-family: var(--heading-font);
   text-align: left;
@@ -765,7 +757,7 @@ h1 {
   border-left: 4px solid var(--vibrant-purple);
   padding: 1.5rem 2rem;
   position: relative;
-  box-shadow: 
+  box-shadow:
     0 0 20px rgba(25, 49, 171, 0.2),
     inset 0 0 20px rgba(104, 93, 206, 0.05);
   font-family: var(--body-font);
@@ -840,15 +832,15 @@ h1 {
   .timeline-item {
     padding-left: 60px;
   }
-  
+
   .timeline-line {
     left: 20px;
   }
-  
+
   .timeline-node {
     left: 10px;
   }
-  
+
   .timeline-content {
     padding: 1rem 1.5rem;
   }
@@ -934,19 +926,19 @@ h1 {
     text-align: center;
     gap: 2rem;
   }
-  
+
   .text-content {
     text-align: center;
   }
-  
+
   .cta-buttons {
     justify-content: center;
   }
-  
+
   h1 {
     font-size: 2.8rem;
   }
-  
+
   .subtitle {
     font-size: 1.2rem;
   }
@@ -956,15 +948,15 @@ h1 {
   .nav-content {
     padding: 1rem;
   }
-  
+
   .nav-links {
     gap: 1.2rem;
   }
-  
+
   .home-container {
     padding: 5rem 1rem 2rem;
   }
-  
+
   .canvas-container {
     height: 400px;
   }
