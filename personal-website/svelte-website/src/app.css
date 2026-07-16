@@ -231,7 +231,7 @@ h1 {
   display: inline-block;
   margin-bottom: 0.75rem;
   padding: 0.425rem 0.8rem;
-  font-size: 1.925rem;
+  font-size: 1.05rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -273,8 +273,8 @@ h1 {
   gap: 0.8rem;
   color: var(--text-light);
   font-family: var(--heading-font);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.95rem;
+  line-height: 1.7;
   backdrop-filter: blur(6px);
   max-width: 64rem;
   text-align: left;
@@ -320,8 +320,8 @@ h1 {
 }
 
 .profile-photo {
-  width: 320px;
-  height: 320px;
+  width: 224px;
+  height: 224px;
   border-radius: 0;
   object-fit: cover;
   box-shadow: var(--shadow);
