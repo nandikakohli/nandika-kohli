@@ -8,10 +8,13 @@
     "dev:react": "vite",
     "dev:svelte": "npm --prefix svelte-website run dev --",
     "build": "npm --prefix svelte-website run build",
+    "build:pages": "npm --prefix svelte-website run build:pages",
+    "check": "npm --prefix svelte-website run check",
     "build:react": "vite build",
     "build:check": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "npm --prefix svelte-website run preview --",
+    "preview:pages": "npm --prefix svelte-website run preview:pages --",
     "preview:react": "vite preview"
   },
   "dependencies": {

@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, feature/homepage-editable-cards ]
   workflow_dispatch:
 
 permissions:
@@ -48,10 +48,17 @@ jobs:
 
       - name: Build
         working-directory: personal-website/svelte-website
-        run: npm run prepare && npm run build
+        run: npm run prepare && npm run build:pages
         env:
-          NODE_ENV: production
+          GITHUB_PAGES: true
           CI: false
+
+      - name: Ensure Pages artifact includes static files
+        working-directory: personal-website/svelte-website
+        run: test -f build/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

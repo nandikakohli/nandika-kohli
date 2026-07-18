@@ -1,8 +1,16 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-const isProduction = process.env.NODE_ENV === 'production';
-const basePath = isProduction ? '/nandika-kohli' : '';
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const basePath = isGitHubPages ? '/nandika-kohli' : '';
+
+const adapterOptions = {
+	pages: 'build',
+	assets: 'build',
+	fallback: '404.html',
+	precompress: false,
+	strict: true
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -12,13 +20,7 @@ const config = {
 		alias: {
 			'@shared': '../shared',
 		},
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: '404.html',
-			precompress: false,
-			strict: true
-		}),
+		adapter: adapter(adapterOptions),
 		paths: {
 			base: basePath
 		}

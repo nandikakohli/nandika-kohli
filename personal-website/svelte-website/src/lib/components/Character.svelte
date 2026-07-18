@@ -4,7 +4,7 @@
 	import { T } from '@threlte/core';
 	import * as THREE from 'three';
 	
-	let handRef: THREE.Mesh | null = null;
+	let handRef: THREE.Mesh | undefined;
 	let clock = new THREE.Clock();
 	let animationId: number;
 	
