@@ -36,7 +36,7 @@
 						Through leading large project teams, I’ve discovered how rewarding it is to build
 						cultures centered on open discussion, mentorship, accountability, bold experimentation,
 						and fun! I’m excited to bring this mindset to robotics safety and systems integration,
-						connecting intelligent software, mechatronics systems, and people centered design to
+						connecting intelligent software, mechatronics systems, with intentional design to
 						translate ambitious research into dependable technology that can be responsibly deployed
 						in the real world.
 					</p>
