@@ -323,9 +323,10 @@ h1 {
 
 .profile-photo {
   width: 224px;
-  height: 224px;
+  height: auto;
   border-radius: 0;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
   box-shadow: var(--shadow);
   border: 6px solid rgba(255, 255, 255, 0.7);
   background: rgba(255, 255, 255, 0.5);
@@ -935,7 +936,7 @@ h1 {
 
   .profile-photo {
     width: 220px;
-    height: 220px;
+    height: auto;
   }
 
   .timeline-item {
