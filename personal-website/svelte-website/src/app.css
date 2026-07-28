@@ -176,10 +176,10 @@ main {
 }
 
 .home-container {
-  min-height: 100dvh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
   padding: 6rem 2rem 1.5rem;
   background: transparent;
@@ -189,7 +189,7 @@ main {
 }
 
 .home-body {
-  flex: 1;
+  flex: 0 1 auto;
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -294,7 +294,7 @@ h1 {
 .last-edited-box {
   position: relative;
   z-index: 2;
-  margin: 1rem auto 2.5rem;
+  margin: clamp(4rem, 13vh, 8.875rem) auto 2.5rem;
   padding: 0.65rem 1.1rem;
   max-width: 28rem;
   text-align: center;
@@ -315,7 +315,7 @@ h1 {
 
 .photo-container {
   width: 100%;
-  min-height: calc(100dvh - 7.5rem);
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
