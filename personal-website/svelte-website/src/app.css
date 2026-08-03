@@ -315,7 +315,7 @@ h1 {
 
 .photo-container {
   width: 100%;
-  min-height: auto;
+  min-height: calc(100dvh - 7.5rem);
   display: flex;
   align-items: center;
   justify-content: center;
