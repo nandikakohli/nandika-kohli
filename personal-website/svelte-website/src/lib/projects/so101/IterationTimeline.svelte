@@ -22,8 +22,8 @@
 	<div class="so101-iteration-track">
 		{#each iterations as iteration, index}
 			<figure class="so101-iteration-card">
-				<figcaption>{iteration.version}</figcaption>
 				<img src={iteration.image} alt={iteration.alt} loading="lazy" />
+				<figcaption>{iteration.version}</figcaption>
 			</figure>
 			{#if index < iterations.length - 1}
 				<div class="so101-iteration-arrow" aria-hidden="true">-&gt;</div>
