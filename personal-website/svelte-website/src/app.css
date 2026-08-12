@@ -473,6 +473,20 @@ h1 {
   transform: translateY(1rem);
 }
 
+.so101-teleop {
+  max-width: 52rem;
+  margin-top: clamp(2rem, 5vh, 3.5rem);
+}
+
+.teleop-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 10px;
+  background: rgba(243, 241, 231, 0.7);
+}
+
 .technical-skills-panel {
   align-self: start;
   padding-top: clamp(0.5rem, 2vh, 1.4rem);
