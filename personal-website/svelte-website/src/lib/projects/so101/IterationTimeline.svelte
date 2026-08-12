@@ -1,18 +1,20 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const iterations = [
 		{
 			version: 'V1',
-			image: '/iteration_arms/iteration 1.jpeg',
+			image: `${base}/iteration_arms/iteration 1.jpeg`,
 			alt: 'SO-101 hardware iteration 1'
 		},
 		{
 			version: 'V2',
-			image: '/iteration_arms/iteration 2.jpg',
+			image: `${base}/iteration_arms/iteration 2.jpg`,
 			alt: 'SO-101 hardware iteration 2'
 		},
 		{
 			version: 'V3',
-			image: '/iteration_arms/iteration 3.png',
+			image: `${base}/iteration_arms/iteration 3.png`,
 			alt: 'SO-101 hardware iteration 3'
 		}
 	];
