@@ -403,6 +403,15 @@ h1 {
   min-height: 1px;
 }
 
+.so101-text-box {
+  padding: 1.25rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 12px;
+  box-shadow: none;
+  backdrop-filter: blur(6px);
+}
+
 .so101-overview {
   max-width: 44rem;
   margin-top: clamp(1rem, 3vh, 2rem);
@@ -444,6 +453,10 @@ h1 {
   color: var(--deep-blue);
   text-transform: uppercase;
   letter-spacing: 0;
+}
+
+.so101-skills-box {
+  margin-top: 0;
 }
 
 .technical-skills-panel ul {
