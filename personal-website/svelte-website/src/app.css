@@ -382,15 +382,12 @@ h1 {
 .year-group > h2 {
   font-family: var(--heading-font);
   color: var(--deep-blue);
+  margin-left: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .so101-section {
   min-height: clamp(18rem, 42vh, 30rem);
-}
-
-.so101-title {
-  margin-left: 1.5rem;
 }
 
 .so101-layout {
