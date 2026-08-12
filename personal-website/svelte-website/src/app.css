@@ -363,7 +363,7 @@ h1 {
   background-image:
     linear-gradient(hsla(0, 0%, 27%, 0.28) 1px, transparent 1px),
     linear-gradient(90deg, hsla(0, 0%, 27%, 0.28) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-size: 40px 40px;
   background-position: 0 0;
 }
 
