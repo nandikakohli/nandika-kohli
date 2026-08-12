@@ -43,10 +43,6 @@ html {
 body {
   font-family: var(--body-font);
   background-color: #fafaf5;
-  background-size: cover;
-  background-position: center 0%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   color: var(--text);
   line-height: 1.8;
   min-height: 100vh;
@@ -191,20 +187,19 @@ main {
 .home-body {
   flex: 0 1 auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   position: relative;
   z-index: 2;
 }
 
 .content {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 224px;
-  column-gap: clamp(3rem, 5vw, 5rem);
-  row-gap: 3rem;
-  align-items: start;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -276,9 +271,13 @@ h1 {
   font-size: 0.95rem;
   line-height: 1.7;
   backdrop-filter: blur(6px);
-  max-width: 100%;
-  width: 100%;
+  max-width: 64rem;
   text-align: left;
+}
+
+.text-content .blurb {
+  width: 125%;
+  max-width: 80rem;
 }
 
 .blurb p {
@@ -330,7 +329,6 @@ h1 {
   box-shadow: var(--shadow);
   border: 6px solid rgba(255, 255, 255, 0.7);
   background: rgba(255, 255, 255, 0.5);
-  margin-top: 0;
 }
 
 /* Other Pages */
@@ -905,6 +903,11 @@ h1 {
 
   .text-content {
     text-align: center;
+  }
+
+  .text-content .blurb {
+    width: 100%;
+    max-width: 64rem;
   }
 
   h1 {
