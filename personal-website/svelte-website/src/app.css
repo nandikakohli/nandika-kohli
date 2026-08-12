@@ -104,12 +104,10 @@ p, li, a, button, input, textarea, select {
 .navbar {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(104, 93, 206, 0.2);
 }
 
 .nav-content {
