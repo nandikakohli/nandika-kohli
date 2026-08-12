@@ -405,7 +405,7 @@ h1 {
 
 .so101-text-box {
   padding: 1.25rem 1.5rem;
-  background: #f3f1e7;
+  background: rgba(243, 241, 231, 0.7);
   border: 1px solid rgba(104, 93, 206, 0.2);
   border-radius: 12px;
   box-shadow: none;
