@@ -422,6 +422,57 @@ h1 {
   line-height: 1.55;
 }
 
+.so101-iterations {
+  margin-top: clamp(2rem, 5vh, 3.5rem);
+}
+
+.so101-iteration-track {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+  align-items: center;
+  max-width: 52rem;
+}
+
+.so101-iteration-card {
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.so101-iteration-card figcaption {
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.so101-iteration-card img {
+  width: 100%;
+  aspect-ratio: 1 / 0.82;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 10px;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.so101-iteration-card img:hover {
+  transform: scale(1.03);
+  border-color: rgba(104, 93, 206, 0.34);
+}
+
+.so101-iteration-arrow {
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  transform: translateY(1rem);
+}
+
 .technical-skills-panel {
   align-self: start;
   padding-top: clamp(0.5rem, 2vh, 1.4rem);
@@ -1068,8 +1119,24 @@ h1 {
     min-height: auto;
   }
 
-  .so101-main-space {
-    display: none;
+  .so101-iteration-track {
+    grid-template-columns: 1fr;
+    max-width: 20rem;
+  }
+
+  .so101-iteration-arrow {
+    justify-self: center;
+    transform: none;
+  }
+
+  .so101-iteration-arrow::before {
+    content: '↓';
+    color: var(--text);
+  }
+
+  .so101-iteration-arrow {
+    font-size: 1.6rem;
+    color: transparent;
   }
 
   .technical-skills-panel {
