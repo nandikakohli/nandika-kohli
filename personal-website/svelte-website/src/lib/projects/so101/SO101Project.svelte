@@ -8,7 +8,7 @@
 </script>
 
 <section class="year-group so101-section">
-	<h2>End to End SO-101 Robotic Arm Build and Control Policy</h2>
+	<h2 class="so101-title">End to End SO-101 Robotic Arm Build and Control Policy</h2>
 	<div class="so101-layout">
 		<div class="so101-main-space">
 			<SO101Overview />

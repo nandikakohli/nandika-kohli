@@ -389,6 +389,10 @@ h1 {
   min-height: clamp(18rem, 42vh, 30rem);
 }
 
+.so101-title {
+  margin-left: 1.5rem;
+}
+
 .so101-layout {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
