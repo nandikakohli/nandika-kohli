@@ -2,10 +2,30 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
+	import { browser } from '$app/environment';
+	import { onDestroy } from 'svelte';
 	import HomeBackground from '$lib/components/HomeBackground.svelte';
+
+	$: normalizedPath = $page.url.pathname.replace(/\/$/, '');
+	$: isHomePage = normalizedPath === base || normalizedPath === '';
+	$: isProjectsPage = normalizedPath.endsWith('/projects');
+
+	$: if (browser) {
+		document.body.classList.toggle('home-route', isHomePage);
+		document.body.classList.toggle('projects-route', isProjectsPage);
+	}
+
+	onDestroy(() => {
+		if (browser) {
+			document.body.classList.remove('home-route');
+			document.body.classList.remove('projects-route');
+		}
+	});
 </script>
 
-<HomeBackground />
+{#if !isProjectsPage}
+	<HomeBackground />
+{/if}
 
 <nav class="navbar">
 	<div class="nav-content">

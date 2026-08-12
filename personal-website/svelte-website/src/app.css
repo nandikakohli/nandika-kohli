@@ -50,6 +50,11 @@ body {
   padding: 0;
 }
 
+body.projects-route {
+  background-color: #f3f1e7;
+  background-image: none;
+}
+
 html, body {
   width: 100%;
   min-height: 100vh;
@@ -347,6 +352,19 @@ h1 {
   font-family: var(--heading-font);
 }
 
+.projects-grid-background {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-color: #f3f1e7;
+  background-image:
+    linear-gradient(hsla(0, 0%, 27%, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, hsla(0, 0%, 27%, 0.28) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0;
+}
+
 .projects-page, .projects-page * {
   font-family: var(--heading-font);
 }
@@ -365,6 +383,98 @@ h1 {
   font-family: var(--heading-font);
   color: var(--deep-blue);
   margin-bottom: 1rem;
+}
+
+.so101-section {
+  min-height: clamp(18rem, 42vh, 30rem);
+}
+
+.so101-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  min-height: clamp(16rem, 36vh, 26rem);
+}
+
+.so101-main-space {
+  min-height: 1px;
+}
+
+.technical-skills-panel {
+  align-self: start;
+  padding-top: clamp(0.5rem, 2vh, 1.4rem);
+}
+
+.so101-model-anchor {
+  width: min(100%, 18rem);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 1.1rem;
+}
+
+.so101-model-anchor model-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  --poster-color: transparent;
+}
+
+.technical-skills-panel h3 {
+  position: relative;
+  z-index: 1;
+  display: inline;
+  font-family: var(--heading-font);
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: var(--deep-blue);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.technical-skills-panel h3::before {
+  content: '';
+  position: absolute;
+  left: -0.35rem;
+  right: -0.35rem;
+  bottom: 0.05rem;
+  height: 0.55em;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(255, 193, 152, 0.75), rgba(226, 169, 219, 0.72));
+  border-radius: 999px;
+}
+
+.technical-skills-panel ul {
+  list-style: none;
+  display: grid;
+  gap: 1.8rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+
+.technical-skills-panel li {
+  position: relative;
+  padding-left: 2.1rem;
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.technical-skills-panel li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  display: grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #111;
+  font-size: 0.95rem;
+  line-height: 1;
+  background: rgba(255, 193, 152, 0.5);
+  border-radius: 50%;
 }
 
 .project-card {
@@ -940,6 +1050,28 @@ h1 {
   .profile-photo {
     width: 220px;
     height: auto;
+  }
+
+  .so101-section {
+    min-height: auto;
+  }
+
+  .so101-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .so101-main-space {
+    display: none;
+  }
+
+  .technical-skills-panel {
+    padding-top: 1rem;
+  }
+
+  .so101-model-anchor {
+    width: min(68vw, 16.5rem);
+    margin-left: 0;
   }
 
   .timeline-item {

@@ -1,5 +1,10 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		import('@google/model-viewer');
+	});
 	
 	function handleImageError(e: Event) {
 		const target = e.target as HTMLImageElement;
@@ -7,8 +12,40 @@
 	}
 </script>
 
+<div class="projects-grid-background" aria-hidden="true"></div>
+
 <div class="page projects-page">
 	<div class="timeline">
+		<section class="year-group so101-section">
+			<h2>End to End SO-101 Robotic Arm Build and Control Policy</h2>
+			<div class="so101-layout">
+				<div class="so101-main-space" aria-hidden="true"></div>
+				<aside class="technical-skills-panel">
+					<div class="so101-model-anchor" aria-label="Interactive SO-101 robotic arm model">
+						<model-viewer
+							src="/3D models/So-101 arms.glb"
+							alt="Interactive 3D model of the SO-101 robotic arm"
+							camera-controls
+							disable-pan
+							interaction-prompt="none"
+							min-camera-orbit="auto auto 85%"
+							max-camera-orbit="auto auto 130%"
+							exposure="1"
+							shadow-intensity="0"
+						></model-viewer>
+					</div>
+					<h3>SKILLS GAINED</h3>
+					<ul>
+						<li>Deep understanding of motor calibration</li>
+						<li>Ability to visualize and design bimanual systems, modifying systems to function intuitively in those environments</li>
+						<li>Drawing on principles that enabled success of teleoperation to clearly define success criteria</li>
+						<li>Iterating upon design of bimanual setup to optimize ergonomics of bimanual arm setup</li>
+						<li>Training ACT policy to perform a simple MSE task</li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+
 		<section class="year-group">
 			<h2>SIMR Bioengineering Institute (2023–2024 Summer)</h2>
 			<div class="project-card simr-poster-fullwidth">
