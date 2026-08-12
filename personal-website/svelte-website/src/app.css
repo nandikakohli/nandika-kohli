@@ -403,6 +403,19 @@ h1 {
   min-height: 1px;
 }
 
+.so101-overview {
+  max-width: 44rem;
+  margin-top: clamp(1rem, 3vh, 2rem);
+}
+
+.so101-overview p {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
 .technical-skills-panel {
   align-self: start;
   padding-top: clamp(0.5rem, 2vh, 1.4rem);
@@ -424,7 +437,6 @@ h1 {
 
 .technical-skills-panel h3 {
   position: relative;
-  z-index: 1;
   display: inline;
   font-family: var(--heading-font);
   font-size: 1.35rem;
@@ -432,18 +444,6 @@ h1 {
   color: var(--deep-blue);
   text-transform: uppercase;
   letter-spacing: 0;
-}
-
-.technical-skills-panel h3::before {
-  content: '';
-  position: absolute;
-  left: -0.35rem;
-  right: -0.35rem;
-  bottom: 0.05rem;
-  height: 0.55em;
-  z-index: -1;
-  background: linear-gradient(90deg, rgba(255, 193, 152, 0.75), rgba(226, 169, 219, 0.72));
-  border-radius: 999px;
 }
 
 .technical-skills-panel ul {
