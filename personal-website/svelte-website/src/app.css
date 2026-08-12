@@ -418,8 +418,8 @@ h1 {
   margin: 0;
   color: var(--text);
   font-family: var(--heading-font);
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.86rem;
+  line-height: 1.6;
 }
 
 .so101-iterations {
