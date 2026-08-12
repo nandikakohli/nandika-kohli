@@ -481,11 +481,10 @@ h1 {
 .so101-teleop h3 {
   display: inline-block;
   margin: 0 0 0.9rem;
-  color: var(--text);
+  color: var(--deep-blue);
   font-family: var(--heading-font);
   font-size: 1.35rem;
   line-height: 1.25;
-  border-bottom: 2px solid currentColor;
 }
 
 .teleop-video {
