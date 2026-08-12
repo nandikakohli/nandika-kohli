@@ -281,8 +281,8 @@ h1 {
 }
 
 .text-content .blurb {
-  width: min(100%, 62rem);
-  max-width: 100%;
+  width: min(115%, 71.3rem);
+  max-width: 71.3rem;
 }
 
 .blurb p {
