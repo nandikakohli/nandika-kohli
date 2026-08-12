@@ -99,12 +99,10 @@ p, li, a, button, input, textarea, select {
 .navbar {
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(104, 93, 206, 0.2);
 }
 
 .nav-content {
@@ -402,6 +400,101 @@ h1 {
   min-height: 1px;
 }
 
+.so101-text-box {
+  padding: 1.25rem 1.5rem;
+  background: rgba(243, 241, 231, 0.7);
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.so101-overview {
+  max-width: 52rem;
+  margin-top: clamp(1rem, 3vh, 2rem);
+}
+
+.so101-overview p {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.so101-iterations {
+  margin-top: clamp(2rem, 5vh, 3.5rem);
+}
+
+.so101-iteration-track {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+  align-items: center;
+  max-width: 52rem;
+}
+
+.so101-iteration-card {
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.so101-iteration-card figcaption {
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.so101-iteration-card img {
+  width: 100%;
+  aspect-ratio: 1 / 0.82;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 10px;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.so101-iteration-card img:hover {
+  transform: scale(1.03);
+  border-color: rgba(104, 93, 206, 0.34);
+}
+
+.so101-iteration-arrow {
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  transform: translateY(1rem);
+}
+
+.so101-teleop {
+  max-width: 52rem;
+  margin-top: clamp(2rem, 5vh, 3.5rem);
+}
+
+.so101-teleop h3 {
+  display: inline-block;
+  margin: 0 0 0.9rem;
+  color: var(--deep-blue);
+  font-family: var(--heading-font);
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.teleop-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 10px;
+  background: rgba(243, 241, 231, 0.7);
+}
+
 .technical-skills-panel {
   align-self: start;
   padding-top: clamp(0.5rem, 2vh, 1.4rem);
@@ -423,7 +516,6 @@ h1 {
 
 .technical-skills-panel h3 {
   position: relative;
-  z-index: 1;
   display: inline;
   font-family: var(--heading-font);
   font-size: 1.35rem;
@@ -433,16 +525,8 @@ h1 {
   letter-spacing: 0;
 }
 
-.technical-skills-panel h3::before {
-  content: '';
-  position: absolute;
-  left: -0.35rem;
-  right: -0.35rem;
-  bottom: 0.05rem;
-  height: 0.55em;
-  z-index: -1;
-  background: linear-gradient(90deg, rgba(255, 193, 152, 0.75), rgba(226, 169, 219, 0.72));
-  border-radius: 999px;
+.so101-skills-box {
+  margin-top: 0;
 }
 
 .technical-skills-panel ul {
@@ -1063,8 +1147,24 @@ h1 {
     min-height: auto;
   }
 
-  .so101-main-space {
-    display: none;
+  .so101-iteration-track {
+    grid-template-columns: 1fr;
+    max-width: 20rem;
+  }
+
+  .so101-iteration-arrow {
+    justify-self: center;
+    transform: none;
+  }
+
+  .so101-iteration-arrow::before {
+    content: '↓';
+    color: var(--text);
+  }
+
+  .so101-iteration-arrow {
+    font-size: 1.6rem;
+    color: transparent;
   }
 
   .technical-skills-panel {
