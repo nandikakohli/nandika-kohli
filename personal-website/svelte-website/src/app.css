@@ -348,6 +348,8 @@ h1 {
 /* Projects page */
 .projects-page {
   font-family: var(--heading-font);
+  width: min(calc(100vw - 2rem), calc((100vw + 1200px) / 2));
+  max-width: none;
 }
 
 .projects-grid-background {
