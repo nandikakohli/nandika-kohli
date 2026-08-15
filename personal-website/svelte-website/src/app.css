@@ -498,11 +498,12 @@ h1 {
 
 .technical-skills-panel {
   align-self: start;
+  justify-self: end;
   padding-top: clamp(0.5rem, 2vh, 1.4rem);
 }
 
 .so101-model-anchor {
-  width: min(100%, 18rem);
+  width: min(100%, 22rem);
   aspect-ratio: 1 / 1;
   margin: 0 auto 1.1rem;
 }
