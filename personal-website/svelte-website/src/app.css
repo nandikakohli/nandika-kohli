@@ -389,10 +389,23 @@ h1 {
   min-height: clamp(18rem, 42vh, 30rem);
 }
 
+.so101-header-group {
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
+}
+
+.so101-header-group > h2,
+.so101-header-group > .so101-layout,
+.so101-main-space,
+.so101-overview,
+.so101-iteration-track {
+  margin-left: 0;
+}
+
 .so101-layout {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
-  gap: clamp(2rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 2.15fr) minmax(18rem, 0.78fr);
+  gap: clamp(1.25rem, 2.8vw, 2.5rem);
   align-items: start;
   min-height: clamp(16rem, 36vh, 26rem);
 }
@@ -428,10 +441,10 @@ h1 {
 
 .so101-iteration-track {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
-  gap: clamp(0.9rem, 2vw, 1.4rem);
+  grid-template-columns: minmax(8rem, 1fr) auto minmax(8rem, 1fr) auto minmax(8rem, 1fr) auto minmax(8rem, 1fr);
+  gap: clamp(0.6rem, 1.4vw, 1.1rem);
   align-items: center;
-  max-width: 52rem;
+  max-width: 64rem;
 }
 
 .so101-iteration-card {
@@ -449,14 +462,30 @@ h1 {
   text-align: center;
 }
 
-.so101-iteration-card img {
+.so101-iteration-card img,
+.so101-iteration-missing {
   width: 100%;
   aspect-ratio: 1 / 0.82;
   display: block;
-  object-fit: cover;
   border: 1px solid rgba(104, 93, 206, 0.2);
   border-radius: 10px;
+}
+
+.so101-iteration-card img {
+  object-fit: cover;
   transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.so101-iteration-missing {
+  display: grid;
+  place-items: center;
+  padding: 0.85rem;
+  background: rgba(243, 241, 231, 0.7);
+  color: var(--text-light);
+  font-family: var(--heading-font);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .so101-iteration-card img:hover {
@@ -499,13 +528,14 @@ h1 {
 .technical-skills-panel {
   align-self: start;
   justify-self: end;
-  padding-top: clamp(0.5rem, 2vh, 1.4rem);
+  width: min(100%, 22rem);
+  padding-top: 0;
 }
 
 .so101-model-anchor {
-  width: min(100%, 22rem);
+  width: 100%;
   aspect-ratio: 1 / 1;
-  margin: 0 auto 1.1rem;
+  margin: clamp(-2rem, -3vh, -0.85rem) auto 0.65rem;
 }
 
 .so101-model-anchor model-viewer {
@@ -518,13 +548,14 @@ h1 {
 
 .technical-skills-panel h3 {
   position: relative;
-  display: inline;
+  display: block;
   font-family: var(--heading-font);
   font-size: 1.35rem;
   line-height: 1.35;
   color: var(--deep-blue);
   text-transform: uppercase;
   letter-spacing: 0;
+  text-align: center;
 }
 
 .so101-skills-box {
@@ -541,11 +572,14 @@ h1 {
 
 .technical-skills-panel li {
   position: relative;
-  padding-left: 2.1rem;
+  display: grid;
+  grid-template-columns: 1.4rem minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: start;
   color: var(--text);
   font-family: var(--heading-font);
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .technical-skills-panel li::before {
@@ -562,6 +596,33 @@ h1 {
   line-height: 1;
   background: rgba(255, 193, 152, 0.5);
   border-radius: 50%;
+}
+
+.technical-skills-panel li::before {
+  content: none;
+}
+
+.skill-star-badge {
+  display: grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: rgba(255, 193, 152, 0.5);
+  border-radius: 50%;
+}
+
+.skill-star-badge svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  overflow: visible;
+}
+
+.skill-star-badge path {
+  fill: none;
+  stroke: #111;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .project-card {

@@ -8,17 +8,19 @@
 </script>
 
 <section class="year-group so101-section">
-	<h2>End to End SO-101 Robotic Arm Build and Control Policy</h2>
-	<div class="so101-layout">
-		<div class="so101-main-space">
-			<SO101Overview />
-			<IterationTimeline />
-			<TeleopVideo />
-			<ACTPlan />
+	<div class="so101-header-group">
+		<h2>End to End SO-101 Robotic Arm Build and Control Policy</h2>
+		<div class="so101-layout">
+			<div class="so101-main-space">
+				<SO101Overview />
+				<IterationTimeline />
+				<TeleopVideo />
+				<ACTPlan />
+			</div>
+			<aside class="technical-skills-panel">
+				<SO101Model />
+				<TechnicalSkills />
+			</aside>
 		</div>
-		<aside class="technical-skills-panel">
-			<SO101Model />
-			<TechnicalSkills />
-		</aside>
 	</div>
 </section>
