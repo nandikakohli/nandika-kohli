@@ -4,22 +4,22 @@
 	const iterations = [
 		{
 			version: 'Iteration 1',
-			image: `${base}/iteration_arms/iteration 1.jpeg`,
+			image: `${base}/optimized/iteration_arms/iteration-1.webp`,
 			alt: 'SO-101 hardware iteration 1'
 		},
 		{
 			version: 'Iteration 2',
-			image: `${base}/iteration_arms/iteration 2.jpg`,
+			image: `${base}/optimized/iteration_arms/iteration-2.webp`,
 			alt: 'SO-101 hardware iteration 2'
 		},
 		{
 			version: 'Iteration 3',
-			image: `${base}/iteration_arms/iteration 3.png`,
+			image: `${base}/optimized/iteration_arms/iteration-3.webp`,
 			alt: 'SO-101 hardware iteration 3'
 		},
 		{
 			version: 'Iteration 4',
-			image: `${base}/iteration_arms/iteration 4.jpeg`,
+			image: `${base}/optimized/iteration_arms/iteration-4.webp`,
 			alt: 'SO-101 hardware iteration 4'
 		}
 	];
