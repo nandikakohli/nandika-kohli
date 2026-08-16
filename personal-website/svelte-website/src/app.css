@@ -785,6 +785,7 @@ h1 {
   grid-template-columns: 1fr;
   max-width: 100%;
   width: 100%;
+  box-shadow: none;
 }
 
 .project-card.simr-poster-fullwidth .project-media {
