@@ -13,7 +13,7 @@
 	].join(',');
 
 	const textSelector = 'h1, h2, h3, h4, p, li, figcaption, span, strong, em, a';
-	const standaloneTextSelector = 'main h1, main h2, main h3';
+	const standaloneTextSelector = 'main h1, main h2, main h3, .so101-model-cue em';
 	const storageKey = 'local-design-editor:v1';
 
 	type SavedState = {
@@ -339,6 +339,28 @@
 		}
 	}
 
+	async function pushToRemote() {
+		flash('Pushing...');
+
+		try {
+			const response = await fetch('/__local-design/push-to-remote', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ state: readState() })
+			});
+			const result = (await response.json()) as { message?: string };
+
+			if (!response.ok) {
+				flash(result.message || 'Push failed');
+				return;
+			}
+
+			flash(result.message || 'Pushed to remote');
+		} catch {
+			flash('Push requires local dev server');
+		}
+	}
+
 	onMount(() => {
 		if (!browser) return;
 
@@ -361,6 +383,7 @@
 			{enabled ? 'Design on' : 'Design'}
 		</button>
 		<button type="button" on:click={copyDesignEdits}>Copy edits</button>
+		<button type="button" on:click={pushToRemote}>Push to remote</button>
 		<button type="button" on:click={resetDesignEdits}>Reset local edits</button>
 		{#if message}
 			<span>{message}</span>

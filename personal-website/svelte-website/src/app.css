@@ -669,6 +669,7 @@ h1 {
   border-left: 0.32rem solid transparent;
   border-right: 0.32rem solid transparent;
   border-top: 0.42rem solid var(--deep-blue);
+  transform: rotate(-90deg);
 }
 
 .so101-model-cue em {

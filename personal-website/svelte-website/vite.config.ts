@@ -1,12 +1,56 @@
+import { execFile } from 'node:child_process';
 import path from 'node:path';
+import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const execFileAsync = promisify(execFile);
+const repoRoot = path.resolve(__dirname, '../..');
+
+function localDesignPushPlugin() {
+	return {
+		name: 'local-design-push',
+		configureServer(server) {
+			server.middlewares.use('/__local-design/push-to-remote', async (req, res) => {
+				if (req.method !== 'POST') {
+					res.statusCode = 405;
+					res.setHeader('Content-Type', 'application/json');
+					res.end(JSON.stringify({ message: 'Use POST to push changes.' }));
+					return;
+				}
+
+				try {
+					await execFileAsync('git', ['add', 'personal-website/svelte-website'], { cwd: repoRoot });
+
+					try {
+						await execFileAsync('git', ['diff', '--cached', '--quiet'], { cwd: repoRoot });
+						res.setHeader('Content-Type', 'application/json');
+						res.end(JSON.stringify({ message: 'No source changes to push.' }));
+						return;
+					} catch {
+						// git diff --quiet exits with 1 when staged changes exist.
+					}
+
+					await execFileAsync('git', ['commit', '-m', 'Apply local website edits'], { cwd: repoRoot });
+					await execFileAsync('git', ['push', 'origin', 'main'], { cwd: repoRoot });
+
+					res.setHeader('Content-Type', 'application/json');
+					res.end(JSON.stringify({ message: 'Pushed to remote.' }));
+				} catch (error) {
+					const message = error instanceof Error ? error.message : 'Push failed.';
+					res.statusCode = 500;
+					res.setHeader('Content-Type', 'application/json');
+					res.end(JSON.stringify({ message }));
+				}
+			});
+		}
+	};
+}
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [localDesignPushPlugin(), sveltekit()],
 	server: {
 		fs: {
 			allow: [__dirname, path.resolve(__dirname, '../node_modules')],
