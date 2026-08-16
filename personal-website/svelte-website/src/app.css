@@ -772,7 +772,7 @@ h1 {
   grid-template-columns: 1fr;
 }
 
-.project-card.ongoing-projects-card {
+.project-card.project-text-box {
   background: rgba(243, 241, 231, 0.7);
   border: 1px solid rgba(104, 93, 206, 0.2);
   border-radius: 12px;

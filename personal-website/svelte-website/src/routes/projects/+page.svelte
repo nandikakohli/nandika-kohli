@@ -51,7 +51,7 @@
 		</section>
 
 		<section class="year-group">
-			<h2>FRC & Robots I've helped build</h2>
+			<h2>First Robotics Competition</h2>
 			<div class="robots-grid">
 				<div class="robots-grid-header">
 					<div class="robots-grid-cell header">Year</div>
@@ -149,7 +149,7 @@
 				</div>
 			</div>
 			-->
-			<div class="project-card no-media ongoing-projects-card">
+			<div class="project-card no-media project-text-box">
 				<div class="project-body">
 					<h3>Current/Ongoing Projects</h3>
 					<ul>
