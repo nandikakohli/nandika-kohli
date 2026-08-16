@@ -4,15 +4,16 @@ import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import type { Plugin, ViteDevServer } from 'vite';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const execFileAsync = promisify(execFile);
 const repoRoot = path.resolve(__dirname, '../..');
 
-function localDesignPushPlugin() {
+function localDesignPushPlugin(): Plugin {
 	return {
 		name: 'local-design-push',
-		configureServer(server) {
+		configureServer(server: ViteDevServer) {
 			server.middlewares.use('/__local-design/push-to-remote', async (req, res) => {
 				if (req.method !== 'POST') {
 					res.statusCode = 405;

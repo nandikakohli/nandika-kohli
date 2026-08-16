@@ -1,19 +1,6 @@
-# Copy Assets Instructions
+# Asset Location
 
-Please copy all files from `personal-website/public/` to `personal-website/svelte-website/static/`
+The active SvelteKit site serves static assets from `svelte-website/static/`.
 
-Required files:
-- profile-new.jpeg
-- profile-backup.jpg
-- Master Resume.docx.pdf
-- Primary Care - Poster.pdf
-- WhatsApp Image 2024-12-09 at 12.43.08_65a96428.jpg
-- baymax-cute-cartoon-robot-with-friendly-design-TwJbeC1k.jpg
-- vite.svg
-- favicon.png (optional, using Baymax image instead)
-
-You can do this manually or run:
-```powershell
-Copy-Item -Path "personal-website\public\*" -Destination "personal-website\svelte-website\static\" -Force
-```
+The old React app was archived to `../archive/react-vite-app/`. Do not copy from its `public/` folder during normal development; add or update live assets directly in `static/`.
 

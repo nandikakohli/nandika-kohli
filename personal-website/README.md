@@ -1,6 +1,8 @@
 # Nandika Kohli Website
 
-This repo contains an older React/Vite app at `personal-website/`, but the live site is the SvelteKit app in `personal-website/svelte-website/`.
+The active site is the SvelteKit app in `personal-website/svelte-website/`.
+
+The old React/Vite version has been archived at `personal-website/archive/react-vite-app/` for reference, but it is no longer wired into the normal dev/build scripts.
 
 Run all day-to-day commands from this `personal-website` folder:
 
