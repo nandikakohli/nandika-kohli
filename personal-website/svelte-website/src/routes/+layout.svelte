@@ -43,7 +43,9 @@
 			-->
 			<a href="{base}/cv">CV</a>
 			<a href="{base}/projects">Projects</a>
+			<!-- TEMPORARILY HIDDEN: Career Goals page
 			<a href="{base}/career-goals">Career Goals</a>
+			-->
 			<!-- COMMENTED OUT: Interests Outside of Robotics link
 			<a href="{base}/interests">Interests Outside of Robotics</a>
 			-->
