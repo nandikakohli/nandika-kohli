@@ -6,8 +6,10 @@
 
 <section class="so101-teleop" aria-label="SO-101 teleoperation demonstration">
 	<h3>Videos of Teleoperation!</h3>
-	<video class="teleop-video" controls playsinline preload="metadata">
-		<source src={teleopVideoSrc} />
-		Your browser does not support the video tag.
-	</video>
+	<div class="teleop-video-crop">
+		<video class="teleop-video" controls playsinline preload="metadata">
+			<source src={teleopVideoSrc} />
+			Your browser does not support the video tag.
+		</video>
+	</div>
 </section>

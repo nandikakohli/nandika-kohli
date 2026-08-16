@@ -620,13 +620,19 @@ h1 {
   line-height: 1.25;
 }
 
-.teleop-video {
+.teleop-video-crop {
   width: 100%;
-  height: auto;
-  display: block;
+  overflow: hidden;
   border: 1px solid rgba(104, 93, 206, 0.2);
   border-radius: 10px;
   background: rgba(243, 241, 231, 0.7);
+}
+
+.teleop-video {
+  width: 200%;
+  height: auto;
+  display: block;
+  max-width: none;
 }
 
 .technical-skills-panel {
