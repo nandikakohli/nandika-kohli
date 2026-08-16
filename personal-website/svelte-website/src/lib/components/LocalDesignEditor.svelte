@@ -13,6 +13,7 @@
 	].join(',');
 
 	const textSelector = 'h1, h2, h3, h4, p, li, figcaption, span, strong, a';
+	const standaloneTextSelector = 'main h1, main h2, main h3';
 	const storageKey = 'local-design-editor:v1';
 
 	type SavedState = {
@@ -55,6 +56,13 @@
 		const tag = node.tagName.toLowerCase();
 		const className = Array.from(node.classList).join('.');
 		return `${cardId}:${tag}.${className}:${index}`;
+	}
+
+	function getStandaloneTextId(node: Element, index: number) {
+		const tag = node.tagName.toLowerCase();
+		const className = Array.from(node.classList).join('.');
+		const section = node.closest('section')?.className || node.closest('.page')?.className || 'main';
+		return `standalone:${section}:${tag}.${className}:${index}`;
 	}
 
 	function cleanupDesignMode() {
@@ -217,6 +225,26 @@
 		cleanupFns.push(() => handle.removeEventListener('pointerdown', onPointerDown));
 	}
 
+	function makeTextEditable(node: HTMLElement, textId: string, state: SavedState, card?: HTMLElement) {
+		node.dataset.designTextId = textId;
+		node.dataset.designEditable = 'true';
+		node.contentEditable = 'true';
+		node.spellcheck = true;
+
+		if (state.text[textId] !== undefined) {
+			node.innerHTML = state.text[textId];
+		}
+
+		const onInput = () => scheduleSave(card);
+		const onPointerDown = (event: PointerEvent) => event.stopPropagation();
+		node.addEventListener('input', onInput);
+		node.addEventListener('pointerdown', onPointerDown);
+		cleanupFns.push(() => {
+			node.removeEventListener('input', onInput);
+			node.removeEventListener('pointerdown', onPointerDown);
+		});
+	}
+
 	function setupTextEditing(card: HTMLElement, cardId: string, state: SavedState) {
 		const candidates = Array.from(card.querySelectorAll<HTMLElement>(textSelector)).filter(
 			(node) =>
@@ -230,23 +258,21 @@
 
 		textNodes.forEach((node, index) => {
 			const textId = getTextId(node, cardId, index);
-			node.dataset.designTextId = textId;
-			node.dataset.designEditable = 'true';
-			node.contentEditable = 'true';
-			node.spellcheck = true;
+			makeTextEditable(node, textId, state, card);
+		});
+	}
 
-			if (state.text[textId] !== undefined) {
-				node.innerHTML = state.text[textId];
-			}
+	function setupStandaloneTextEditing(state: SavedState) {
+		const nodes = Array.from(document.querySelectorAll<HTMLElement>(standaloneTextSelector)).filter(
+			(node) =>
+				!node.closest('[data-design-card]') &&
+				!node.closest('nav') &&
+				!node.closest('.local-design-toolbar') &&
+				Boolean(node.textContent?.trim())
+		);
 
-			const onInput = () => scheduleSave(card);
-			const onPointerDown = (event: PointerEvent) => event.stopPropagation();
-			node.addEventListener('input', onInput);
-			node.addEventListener('pointerdown', onPointerDown);
-			cleanupFns.push(() => {
-				node.removeEventListener('input', onInput);
-				node.removeEventListener('pointerdown', onPointerDown);
-			});
+		nodes.forEach((node, index) => {
+			makeTextEditable(node, getStandaloneTextId(node, index), state);
 		});
 	}
 
@@ -271,6 +297,8 @@
 			makeCardResizable(card);
 			setupTextEditing(card, cardId, state);
 		});
+
+		setupStandaloneTextEditing(state);
 	}
 
 	async function toggleDesignMode() {

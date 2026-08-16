@@ -302,11 +302,11 @@ h1 {
   padding: 0.65rem 1.1rem;
   max-width: 28rem;
   text-align: center;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(104, 93, 206, 0.22);
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(6px);
+  background: rgba(243, 241, 231, 0.7);
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 12px;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .last-edited-box p {
@@ -770,6 +770,15 @@ h1 {
 
 .project-card.no-media {
   grid-template-columns: 1fr;
+}
+
+.project-card.ongoing-projects-card {
+  background: rgba(243, 241, 231, 0.7);
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .project-card.simr-poster-fullwidth {

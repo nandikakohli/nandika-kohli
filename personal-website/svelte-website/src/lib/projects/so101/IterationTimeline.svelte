@@ -19,8 +19,8 @@
 		},
 		{
 			version: 'Iteration 4',
-			image: null,
-			alt: 'SO-101 hardware iteration 4 image needed'
+			image: `${base}/iteration_arms/iteration 4.jpeg`,
+			alt: 'SO-101 hardware iteration 4'
 		}
 	];
 </script>
