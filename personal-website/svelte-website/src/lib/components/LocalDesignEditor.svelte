@@ -12,7 +12,7 @@
 		'.blurb'
 	].join(',');
 
-	const textSelector = 'h1, h2, h3, h4, p, li, figcaption, span, strong, a';
+	const textSelector = 'h1, h2, h3, h4, p, li, figcaption, span, strong, em, a';
 	const standaloneTextSelector = 'main h1, main h2, main h3';
 	const storageKey = 'local-design-editor:v1';
 
