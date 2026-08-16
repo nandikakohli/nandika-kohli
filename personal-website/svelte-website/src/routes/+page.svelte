@@ -2,6 +2,8 @@
 	import { fade } from 'svelte/transition';
 	import { base } from '$app/paths';
 
+	const homeLoadDuration = 100;
+
 	function handleImageError(e: Event) {
 		const target = e.target as HTMLImageElement;
 		target.src = `${base}/profile-backup.jpg`;
@@ -11,7 +13,7 @@
 <div class="home-container">
 	<div class="home-body">
 		<div class="content">
-			<div class="text-content" transition:fade={{ duration: 800, delay: 0 }}>
+			<div class="text-content" transition:fade={{ duration: homeLoadDuration, delay: 0 }}>
 				<h1 class="home-title">Hi I'm <span class="highlight">Nandika</span>!</h1>
 				<section class="blurb intro-blurb">
 					<p>
@@ -57,6 +59,9 @@
 					src="{base}/profile-new.jpeg"
 					alt="Profile"
 					class="profile-photo"
+					loading="eager"
+					fetchpriority="high"
+					decoding="async"
 					on:error={handleImageError}
 				/>
 			</div>
