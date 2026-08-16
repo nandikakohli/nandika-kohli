@@ -8,6 +8,7 @@
 		'.so101-iteration-card',
 		'.simr-media-item',
 		'.robots-grid-row',
+		'.so101-teleop',
 		'.timeline-content',
 		'.blurb'
 	].join(',');
