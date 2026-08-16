@@ -38,7 +38,7 @@
 		z-index: 1;
 		pointer-events: none;
 		overflow: hidden;
-		background: #fafaf5;
+		background: var(--background);
 	}
 
 	.grid-bg {

@@ -26,7 +26,7 @@
 		z-index: 1;
 		pointer-events: none;
 		overflow: hidden;
-		background-color: #fafaf5;
+		background-color: var(--background);
 	}
 
 	.home-bg-container {
