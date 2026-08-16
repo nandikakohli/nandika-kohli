@@ -14,11 +14,15 @@
 
 	const textSelector = 'h1, h2, h3, h4, p, li, figcaption, span, strong, em, a';
 	const standaloneTextSelector = 'main h1, main h2, main h3, .so101-model-cue em';
+	const videoSelector = '.teleop-video-crop';
 	const storageKey = 'local-design-editor:v1';
+	const videoCropModes = ['full', 'left-half', 'right-half'] as const;
+	type VideoCropMode = (typeof videoCropModes)[number];
 
 	type SavedState = {
 		cards: Record<string, { x: number; y: number; width?: number; height?: number }>;
 		text: Record<string, string>;
+		videos: Record<string, { crop: VideoCropMode }>;
 	};
 
 	let isLocal = false;
@@ -28,14 +32,19 @@
 	let cleanupFns: Array<() => void> = [];
 
 	function defaultState(): SavedState {
-		return { cards: {}, text: {} };
+		return { cards: {}, text: {}, videos: {} };
 	}
 
 	function readState(): SavedState {
 		if (!browser) return defaultState();
 
 		try {
-			return JSON.parse(localStorage.getItem(storageKey) ?? '') as SavedState;
+			const state = JSON.parse(localStorage.getItem(storageKey) ?? '') as Partial<SavedState>;
+			return {
+				cards: state.cards ?? {},
+				text: state.text ?? {},
+				videos: state.videos ?? {}
+			};
 		} catch {
 			return defaultState();
 		}
@@ -65,6 +74,17 @@
 		return `standalone:${section}:${tag}.${className}:${index}`;
 	}
 
+	function getVideoId(videoFrame: Element, index: number) {
+		const className = Array.from(videoFrame.classList)
+			.filter((className) => !className.startsWith('design-'))
+			.join('.');
+		return `${videoFrame.tagName.toLowerCase()}.${className}:${index}`;
+	}
+
+	function toVideoCropMode(value: string | undefined): VideoCropMode {
+		return videoCropModes.includes(value as VideoCropMode) ? (value as VideoCropMode) : 'full';
+	}
+
 	function cleanupDesignMode() {
 		cleanupFns.forEach((cleanup) => cleanup());
 		cleanupFns = [];
@@ -74,6 +94,12 @@
 			card.removeAttribute('data-design-id');
 			card.querySelector('.design-drag-handle')?.remove();
 			card.querySelector('.design-resize-handle')?.remove();
+		});
+
+		document.querySelectorAll('[data-design-video]').forEach((videoFrame) => {
+			videoFrame.removeAttribute('data-design-video');
+			videoFrame.removeAttribute('data-design-video-id');
+			videoFrame.querySelector('.design-video-toolbar')?.remove();
 		});
 
 		document.querySelectorAll('[data-design-editable]').forEach((node) => {
@@ -99,6 +125,12 @@
 				const width = Number(item.dataset.designWidth || 0) || undefined;
 				const height = Number(item.dataset.designHeight || 0) || undefined;
 				state.cards[id] = { x, y, width, height };
+			});
+
+			document.querySelectorAll<HTMLElement>('[data-design-video]').forEach((item) => {
+				const id = item.dataset.designVideoId;
+				if (!id) return;
+				state.videos[id] = { crop: toVideoCropMode(item.dataset.videoCrop) };
 			});
 
 			document.querySelectorAll<HTMLElement>('[data-design-text-id]').forEach((item) => {
@@ -245,6 +277,54 @@
 		});
 	}
 
+	function applyVideoCrop(videoFrame: HTMLElement, crop: VideoCropMode) {
+		videoFrame.dataset.videoCrop = crop;
+		videoFrame.dataset.designVideoCrop = crop;
+	}
+
+	function makeVideoCroppable(videoFrame: HTMLElement, videoId: string, state: SavedState) {
+		if (!videoFrame.dataset.defaultVideoCrop) {
+			videoFrame.dataset.defaultVideoCrop = toVideoCropMode(videoFrame.dataset.videoCrop);
+		}
+
+		const savedCrop = state.videos[videoId]?.crop;
+		const defaultCrop = toVideoCropMode(videoFrame.dataset.defaultVideoCrop);
+		applyVideoCrop(videoFrame, savedCrop ?? defaultCrop);
+
+		const toolbar = document.createElement('div');
+		toolbar.className = 'design-video-toolbar';
+
+		const options: Array<{ label: string; value: VideoCropMode }> = [
+			{ label: 'Full', value: 'full' },
+			{ label: 'Left half', value: 'left-half' },
+			{ label: 'Right half', value: 'right-half' }
+		];
+
+		options.forEach((option) => {
+			const button = document.createElement('button');
+			button.type = 'button';
+			button.textContent = option.label;
+			button.title = `Crop video to ${option.label.toLowerCase()}`;
+			button.classList.toggle('active', videoFrame.dataset.videoCrop === option.value);
+
+			const onClick = (event: MouseEvent) => {
+				event.preventDefault();
+				event.stopPropagation();
+				applyVideoCrop(videoFrame, option.value);
+				toolbar.querySelectorAll('button').forEach((item) => {
+					item.classList.toggle('active', item === button);
+				});
+				scheduleSave(videoFrame);
+			};
+
+			button.addEventListener('click', onClick);
+			cleanupFns.push(() => button.removeEventListener('click', onClick));
+			toolbar.append(button);
+		});
+
+		videoFrame.append(toolbar);
+	}
+
 	function setupTextEditing(card: HTMLElement, cardId: string, state: SavedState) {
 		const candidates = Array.from(card.querySelectorAll<HTMLElement>(textSelector)).filter(
 			(node) =>
@@ -276,6 +356,19 @@
 		});
 	}
 
+	function setupVideoCropping(state: SavedState) {
+		const videos = Array.from(document.querySelectorAll<HTMLElement>(videoSelector)).filter(
+			(videoFrame) => !videoFrame.closest('nav') && !videoFrame.closest('.local-design-toolbar')
+		);
+
+		videos.forEach((videoFrame, index) => {
+			const videoId = getVideoId(videoFrame, index);
+			videoFrame.dataset.designVideo = 'true';
+			videoFrame.dataset.designVideoId = videoId;
+			makeVideoCroppable(videoFrame, videoId, state);
+		});
+	}
+
 	function setupDesignMode() {
 		if (!browser || !enabled) return;
 
@@ -299,6 +392,7 @@
 		});
 
 		setupStandaloneTextEditing(state);
+		setupVideoCropping(state);
 	}
 
 	async function toggleDesignMode() {
@@ -323,6 +417,9 @@
 			card.style.width = '';
 			card.style.maxWidth = '';
 			card.style.minHeight = '';
+		});
+		document.querySelectorAll<HTMLElement>('[data-design-video]').forEach((videoFrame) => {
+			applyVideoCrop(videoFrame, toVideoCropMode(videoFrame.dataset.defaultVideoCrop));
 		});
 		flash('Local edits reset. Refresh to restore original text.');
 	}
