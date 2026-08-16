@@ -5,6 +5,7 @@
 	import { browser } from '$app/environment';
 	import { onDestroy } from 'svelte';
 	import HomeBackground from '$lib/components/HomeBackground.svelte';
+	import LocalDesignEditor from '$lib/components/LocalDesignEditor.svelte';
 
 	$: normalizedPath = $page.url.pathname.replace(/\/$/, '');
 	$: isHomePage = normalizedPath === base || normalizedPath === '';
@@ -58,3 +59,5 @@
 <footer class="last-edited-box" aria-label="Last updated">
 	<p>Website updated 2026.</p>
 </footer>
+
+<LocalDesignEditor />

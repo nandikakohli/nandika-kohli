@@ -149,7 +149,7 @@
 				</div>
 			</div>
 			-->
-			<div class="project-card no-media">
+			<div class="project-card no-media project-text-box">
 				<div class="project-body">
 					<h3>Current/Ongoing Projects</h3>
 					<ul>
