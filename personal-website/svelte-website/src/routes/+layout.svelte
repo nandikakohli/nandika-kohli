@@ -49,7 +49,9 @@
 			<!-- COMMENTED OUT: Interests Outside of Robotics link
 			<a href="{base}/interests">Interests Outside of Robotics</a>
 			-->
+			<!-- TEMPORARILY HIDDEN: Credits, Thanks, and Acknowledgments page
 			<a href="{base}/citations">Credits, Thanks, and Acknowledgments</a>
+			-->
 		</div>
 	</div>
 </nav>
