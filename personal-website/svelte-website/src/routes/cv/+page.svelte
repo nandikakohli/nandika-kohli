@@ -1,18 +1,21 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+
+	const resumePath = `${base}/Nandika-Kohli-Resume.pdf`;
+	const resumeFileName = 'Nandika Kohli Resume.pdf';
 </script>
 
 <div class="page cv-container">
 	<div class="cv-actions">
-		<a class="download-btn" href="{base}/Master%20Resume.docx.pdf" download>
-			Download PDF
+		<a class="download-btn" href={resumePath} download={resumeFileName} aria-label="Download Nandika Kohli resume PDF">
+			Download Resume
 		</a>
-		<a class="view-btn" href="{base}/Master%20Resume.docx.pdf" target="_blank" rel="noreferrer">
-			Open in new tab
+		<a class="view-btn" href={resumePath} target="_blank" rel="noreferrer" aria-label="Open Nandika Kohli resume PDF in a new tab">
+			Open Resume
 		</a>
 	</div>
 	<div class="cv-embed">
-		<iframe title="CV" src="{base}/Master%20Resume.docx.pdf#toolbar=0" loading="lazy"></iframe>
+		<iframe title="Nandika Kohli resume" src={`${resumePath}#toolbar=0`} loading="lazy"></iframe>
 	</div>
 </div>
 
