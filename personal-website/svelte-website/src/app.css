@@ -360,6 +360,81 @@ h1 {
   line-height: 1.25;
 }
 
+.local-crop-toolbar {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 3001;
+  display: grid;
+  grid-template-columns: auto auto auto minmax(12rem, 18rem) auto;
+  gap: 0.65rem;
+  align-items: center;
+  max-width: calc(100vw - 2rem);
+  padding: 0.65rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(104, 93, 206, 0.34);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(26, 21, 57, 0.18);
+  transform: translateX(-50%);
+}
+
+.local-crop-toolbar strong,
+.local-crop-toolbar span {
+  color: var(--deep-blue);
+  font-family: var(--heading-font);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.local-crop-toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.local-crop-toolbar select,
+.local-crop-toolbar input,
+.local-crop-toolbar button {
+  font-family: var(--heading-font);
+  font-size: 0.72rem;
+}
+
+.local-crop-toolbar select {
+  min-width: 5.7rem;
+  padding: 0.38rem 0.45rem;
+  color: var(--text);
+  background: rgba(243, 241, 231, 0.9);
+  border: 1px solid rgba(104, 93, 206, 0.28);
+  border-radius: 7px;
+}
+
+.local-crop-slider input {
+  width: 100%;
+  accent-color: var(--vibrant-purple);
+}
+
+.local-crop-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.local-crop-actions button {
+  padding: 0.42rem 0.55rem;
+  color: var(--deep-blue);
+  background: rgba(243, 241, 231, 0.9);
+  border: 1px solid rgba(104, 93, 206, 0.28);
+  border-radius: 7px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.local-crop-actions button.primary {
+  color: #fff;
+  background: var(--vibrant-purple);
+}
+
 [data-design-card='true'] {
   outline: 1px dashed rgba(104, 93, 206, 0.58);
   outline-offset: 4px;
@@ -375,8 +450,14 @@ h1 {
   outline-color: var(--vibrant-purple);
 }
 
+.design-card-cropping {
+  outline-color: var(--deep-blue);
+}
+
 .design-drag-handle,
-.design-resize-handle {
+.design-resize-handle,
+.design-crop-mode-handle,
+.design-video-size-handle {
   position: absolute;
   right: 0.35rem;
   z-index: 5;
@@ -403,6 +484,60 @@ h1 {
   right: 0.35rem;
   bottom: 0.35rem;
   cursor: nwse-resize;
+}
+
+.design-crop-mode-handle {
+  top: 0.35rem;
+  right: 0.35rem;
+}
+
+.design-video-size-handle {
+  right: 0.35rem;
+  bottom: 0.35rem;
+  cursor: nwse-resize;
+}
+
+.design-video-resizing {
+  outline-color: var(--vibrant-purple);
+  aspect-ratio: auto !important;
+}
+
+[data-design-crop-target='true'] {
+  outline: 1px solid rgba(226, 169, 219, 0.88);
+  outline-offset: -3px;
+  cursor: move;
+}
+
+[data-design-crop-target='true'] video,
+[data-design-crop-target='true'] img {
+  pointer-events: none;
+}
+
+.design-crop-active {
+  cursor: move;
+}
+
+.design-crop-active video,
+.design-crop-active img {
+  pointer-events: none;
+}
+
+.design-crop-active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  border: 2px solid rgba(25, 49, 171, 0.78);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.74);
+}
+
+.design-crop-editing {
+  outline-color: var(--deep-blue);
+}
+
+.design-video-panning {
+  outline-color: var(--deep-blue);
 }
 
 [data-design-editable='true'] {
@@ -525,9 +660,9 @@ h1 {
 }
 
 .so101-overview {
-  width: min(100%, 978px);
-  max-width: 978px;
-  min-height: 253px;
+  width: min(100%, 1029px);
+  max-width: 1029px;
+  min-height: 194px;
   margin-top: clamp(1rem, 3vh, 2rem);
 }
 
@@ -555,6 +690,22 @@ h1 {
   margin: 0;
   display: grid;
   gap: 0.55rem;
+}
+
+.so101-iteration-card:nth-of-type(1) {
+  transform: translate(2px, 18px);
+}
+
+.so101-iteration-card:nth-of-type(2) {
+  transform: translate(6px, 18px);
+}
+
+.so101-iteration-card:nth-of-type(3) {
+  transform: translate(-4px, 17px);
+}
+
+.so101-iteration-card:nth-of-type(4) {
+  transform: translate(-2px, 16px);
 }
 
 .so101-iteration-card figcaption {
@@ -607,8 +758,11 @@ h1 {
 }
 
 .so101-teleop {
-  max-width: 52rem;
+  width: min(100%, 958px);
+  max-width: 958px;
+  min-height: 389px;
   margin-top: clamp(2rem, 5vh, 3.5rem);
+  transform: translate(-3px, 31px);
 }
 
 .so101-teleop h3 {
@@ -620,19 +774,218 @@ h1 {
   line-height: 1.25;
 }
 
-.teleop-video {
+.teleop-media-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(16rem, 0.92fr);
+  gap: clamp(0.75rem, 1.4vw, 1.1rem);
+  align-items: stretch;
+}
+
+.teleop-video-frame {
+  position: relative;
   width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   border: 1px solid rgba(104, 93, 206, 0.2);
   border-radius: 10px;
   background: rgba(243, 241, 231, 0.7);
 }
 
+.teleop-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 47% 35%;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: transform 0.04s linear;
+}
+
+.teleop-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.55rem 0.7rem;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(26, 21, 57, 0), rgba(26, 21, 57, 0.76) 28%, rgba(26, 21, 57, 0.88));
+}
+
+.teleop-control-button {
+  padding: 0.38rem 0.6rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 7px;
+  font-family: var(--heading-font);
+  font-size: clamp(0.62rem, 1.2vw, 0.75rem);
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.teleop-progress {
+  width: 100%;
+  min-width: 0;
+  accent-color: var(--warm-peach);
+}
+
+.teleop-time {
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: clamp(0.58rem, 1.1vw, 0.72rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.teleop-pdf-panel {
+  min-height: 100%;
+  overflow: hidden;
+  background: rgba(243, 241, 231, 0.72);
+  border: 1px solid rgba(104, 93, 206, 0.2);
+  border-radius: 10px;
+}
+
+.teleop-pdf-header,
+.teleop-pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.7rem;
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(104, 93, 206, 0.18);
+}
+
+.teleop-pdf-header h4,
+.teleop-pdf-modal-header h4 {
+  margin: 0;
+  color: var(--deep-blue);
+  font-family: var(--heading-font);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.teleop-pdf-icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  padding: 0;
+  color: var(--deep-blue);
+  background: rgba(243, 241, 231, 0.9);
+  border: 1px solid rgba(104, 93, 206, 0.28);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.teleop-pdf-icon-button:hover,
+.teleop-pdf-icon-button:focus-visible {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(104, 93, 206, 0.44);
+}
+
+.teleop-pdf-icon-button:focus-visible {
+  outline: 2px solid rgba(104, 93, 206, 0.42);
+  outline-offset: 2px;
+}
+
+.teleop-pdf-icon-button svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.teleop-pdf-frame {
+  display: block;
+  width: 100%;
+  height: calc(100% - 2.45rem);
+  min-height: 16rem;
+  border: 0;
+  background: #fff;
+}
+
+.teleop-pdf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.25rem;
+  background: rgba(26, 21, 57, 0.52);
+}
+
+.teleop-pdf-modal-card {
+  width: min(72rem, 96vw);
+  height: min(48rem, 92vh);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(104, 93, 206, 0.28);
+  border-radius: 10px;
+  box-shadow: 0 20px 48px rgba(26, 21, 57, 0.28);
+}
+
+.teleop-pdf-modal-frame {
+  display: block;
+  width: 100%;
+  height: calc(100% - 2.7rem);
+  border: 0;
+}
+
+.teleop-pdf-side-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  padding: 0;
+  color: var(--deep-blue);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(104, 93, 206, 0.32);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(26, 21, 57, 0.22);
+  cursor: pointer;
+}
+
+.teleop-pdf-side-button:hover,
+.teleop-pdf-side-button:focus-visible {
+  background: #fff;
+  border-color: rgba(104, 93, 206, 0.5);
+}
+
+.teleop-pdf-side-button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.86);
+  outline-offset: 2px;
+}
+
+.teleop-pdf-side-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 .technical-skills-panel {
   align-self: start;
   justify-self: end;
-  width: min(100%, 22rem);
+  width: min(100%, 22.625rem);
   padding-top: 0;
 }
 
@@ -689,10 +1042,10 @@ h1 {
 }
 
 .so101-skills-box {
-  width: 289px;
-  min-height: 666px;
+  width: 362px;
+  min-height: 505px;
   margin-top: 0;
-  transform: translate(45px, 6px);
+  transform: translate(0, 0);
 }
 
 .technical-skills-panel ul {
@@ -1352,6 +1705,10 @@ h1 {
     max-width: 20rem;
   }
 
+  .so101-iteration-card {
+    transform: none;
+  }
+
   .so101-iteration-arrow {
     justify-self: center;
     transform: none;
@@ -1367,8 +1724,33 @@ h1 {
     color: transparent;
   }
 
+  .teleop-media-row {
+    grid-template-columns: 1fr;
+  }
+
+  .so101-teleop {
+    width: 100%;
+    min-height: auto;
+    transform: none;
+  }
+
+  .teleop-pdf-modal {
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+
+  .teleop-pdf-modal-card {
+    width: 100%;
+    height: min(44rem, calc(100vh - 5.25rem));
+  }
+
   .technical-skills-panel {
     padding-top: 1rem;
+  }
+
+  .so101-skills-box {
+    width: 100%;
+    min-height: auto;
   }
 
   .so101-model-anchor {
