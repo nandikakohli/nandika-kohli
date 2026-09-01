@@ -1396,6 +1396,22 @@ h1 {
   border: 0;
 }
 
+.portfolio-container {
+  max-width: 900px;
+}
+
+.portfolio-container .cv-actions,
+.portfolio-embed {
+  width: min(100%, 760px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-embed {
+  height: min(86vh, 1050px);
+  min-height: 680px;
+}
+
 /* Career Goals page - Tech Timeline */
 .goals-page h1 {
   margin-bottom: 3rem;

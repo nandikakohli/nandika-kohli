@@ -3,7 +3,7 @@
 	const canvaEmbedUrl = `${canvaViewUrl}?embed`;
 </script>
 
-<div class="page cv-container">
+<div class="page cv-container portfolio-container">
 	<div class="cv-actions">
 		<a
 			class="download-btn"
@@ -24,7 +24,7 @@
 			Open Portfolio
 		</a>
 	</div>
-	<div class="cv-embed">
+	<div class="cv-embed portfolio-embed">
 		<iframe
 			title="Nandika Kohli portfolio"
 			src={canvaEmbedUrl}
