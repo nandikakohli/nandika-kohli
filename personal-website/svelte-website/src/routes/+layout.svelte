@@ -42,6 +42,7 @@
 			<a href="{base}/robotics">Robotics</a>
 			-->
 			<a href="{base}/cv">CV</a>
+			<a href="{base}/portfolio">Portfolio</a>
 			<a href="{base}/projects">Projects</a>
 			<!-- TEMPORARILY HIDDEN: Career Goals page
 			<a href="{base}/career-goals">Career Goals</a>
